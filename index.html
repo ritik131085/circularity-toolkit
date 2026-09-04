@@ -309,10 +309,60 @@ body{background:var(--ct-bg);color:var(--ct-ink)}
 @media(max-width:1000px){.evidenceBar,.authorityGrid{grid-template-columns:1fr}.evidenceKey{justify-content:flex-start}.regGrid{grid-template-columns:1fr 1fr}.module-v3 .mbody-grid.depth3{grid-template-columns:1fr}}
 @media(max-width:620px){.regGrid{grid-template-columns:1fr}.regBaselineTop{display:block}}
 
+
+/* ===== V3.5 interactive decision tools ===== */
+.decisionSection{padding:88px 0;background:linear-gradient(180deg,var(--ct-bg),var(--ct-surface2))}
+.decisionShell{border:1px solid var(--ct-line);border-radius:28px;background:var(--ct-surface);box-shadow:var(--ct-shadow);overflow:hidden}
+.decisionTabs{display:grid;grid-template-columns:repeat(3,1fr);padding:10px;background:var(--ct-surface2);border-bottom:1px solid var(--ct-line);gap:8px}
+.decisionTab{border:0;border-radius:16px;padding:14px 16px;background:transparent;color:var(--ct-muted);font-weight:800;text-align:left;display:flex;align-items:center;gap:11px;cursor:pointer}
+.decisionTab.active{background:var(--ct-surface);color:var(--ct-ink);box-shadow:0 8px 24px rgba(11,31,58,.07)}
+.decisionTabIcon{width:34px;height:34px;border-radius:11px;background:var(--ct-brand-soft);color:var(--ct-brand);display:grid;place-items:center;flex:0 0 auto}
+.decisionTabIcon svg{width:20px;height:20px}
+.decisionPanel{display:none;padding:28px}
+.decisionPanel.active{display:block}
+.decisionHead{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:start;margin-bottom:22px}
+.decisionHead h3{font-size:28px;letter-spacing:-.035em;margin:4px 0 8px}
+.decisionHead p{margin:0;color:var(--ct-muted);max-width:760px}
+.decisionLabel{font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--ct-brand)}
+.decisionType{padding:7px 10px;border-radius:999px;background:var(--ct-brand-soft);color:var(--ct-brand);font-size:11px;font-weight:850;white-space:nowrap}
+.decisionGrid{display:grid;grid-template-columns:.92fr 1.08fr;gap:20px;align-items:start}
+.decisionForm{border:1px solid var(--ct-line);border-radius:20px;padding:20px;background:var(--ct-bg)}
+.decisionFields{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.decisionField{display:grid;gap:7px}
+.decisionField.full{grid-column:1/-1}
+.decisionField label{font-size:12px;font-weight:800;color:var(--ct-muted)}
+.decisionField select,.decisionField input{width:100%;min-height:45px;border:1px solid var(--ct-line);border-radius:12px;background:var(--ct-surface);color:var(--ct-ink);padding:10px 12px}
+.decisionHelp{font-size:11px;color:var(--ct-muted);line-height:1.45}
+.decisionActionRow{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}
+.decisionResult{border:1px solid var(--ct-line);border-radius:20px;padding:22px;background:linear-gradient(145deg,var(--ct-surface),var(--ct-surface2));min-height:360px}
+.decisionEmpty{display:grid;place-items:center;min-height:310px;text-align:center;color:var(--ct-muted);padding:30px}
+.decisionEmptyIcon{width:54px;height:54px;border-radius:17px;background:var(--ct-brand-soft);color:var(--ct-brand);display:grid;place-items:center;margin:0 auto 14px;font-size:22px}
+.resultEyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:var(--ct-muted)}
+.resultTitle{font-size:28px;letter-spacing:-.035em;line-height:1.08;margin:6px 0 9px}
+.resultLead{color:var(--ct-muted);margin:0 0 17px}
+.resultStatus{display:inline-flex;padding:7px 10px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:15px}
+.resultStatus.good{background:#e7f7f0;color:#17805e}
+.resultStatus.watch{background:#fff4df;color:#a96b0e}
+.resultStatus.risk{background:#ffe9e8;color:#b8413d}
+.resultBlocks{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:14px}
+.resultBlock{border:1px solid var(--ct-line);border-radius:15px;padding:14px;background:var(--ct-surface)}
+.resultBlock.full{grid-column:1/-1}
+.resultBlock b{display:block;font-size:12px;margin-bottom:6px}
+.resultBlock ul{margin:0;padding-left:17px;color:var(--ct-muted);font-size:13px}
+.resultBlock li+li{margin-top:5px}
+.resultMeta{margin-top:14px;padding-top:12px;border-top:1px solid var(--ct-line);font-size:11px;color:var(--ct-muted)}
+.scoreBar{height:8px;background:var(--ct-line);border-radius:999px;overflow:hidden;margin:8px 0 14px}.scoreBar span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#2e66ff,#78a3ff)}
+.gradeBadge{width:66px;height:66px;border-radius:20px;display:grid;place-items:center;font-size:31px;font-weight:900;margin-bottom:14px}
+.gradeBadge.a{background:#e7f7f0;color:#17805e}.gradeBadge.b{background:#fff4df;color:#a96b0e}.gradeBadge.c{background:#ffe9e8;color:#b8413d}
+.heuristicNote{margin-top:16px;padding:11px 13px;border-radius:13px;border:1px dashed var(--ct-line);color:var(--ct-muted);font-size:11px}
+.toolJumpRow{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}.toolJumpRow a{font-size:12px;font-weight:800;color:var(--ct-brand);padding:7px 10px;border:1px solid var(--ct-line);border-radius:999px;background:var(--ct-surface)}
+@media(max-width:900px){.decisionGrid{grid-template-columns:1fr}.decisionTabs{grid-template-columns:1fr}.decisionPanel{padding:20px}.decisionHead{grid-template-columns:1fr}.decisionFields{grid-template-columns:1fr}.decisionField.full{grid-column:auto}}
+@media(max-width:620px){.resultBlocks{grid-template-columns:1fr}.resultBlock.full{grid-column:auto}}
+
 </style>
 </head>
 <body><a class="skip" href="#top">Skip to content</a>
-<header class="header"><div class="container nav"><a class="brand" href="#top"><span class="mark">↻</span><span>Circularity Toolkit</span></a><nav class="links"><a href="#system-map">System map</a><a href="#pathway">Start</a><a href="#tools">Guidance</a><a href="#health-check">Health check</a><a href="#planner">System planner</a><a href="#risk">Risk</a><a href="#evidence-base">Evidence</a><a href="#resources">Resources</a></nav><div class="navTools">
+<header class="header"><div class="container nav"><a class="brand" href="#top"><span class="mark">↻</span><span>Circularity Toolkit</span></a><nav class="links"><a href="#system-map">System map</a><a href="#pathway">Start</a><a href="#decision-tools">Decision tools</a><a href="#tools">Guidance</a><a href="#health-check">Health check</a><a href="#planner">System planner</a><a href="#risk">Risk</a><a href="#evidence-base">Evidence</a><a href="#resources">Resources</a></nav><div class="navTools">
     <button class="iconBtn themeToggle" id="themeToggle" type="button" aria-label="Switch theme">
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
       <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -323,7 +373,7 @@ body{background:var(--ct-bg);color:var(--ct-ink)}
     <a class="cta" href="#planner">Run a diagnostic</a>
   </div></div>
   <div id="mobileNav"><nav class="mobileNav container" aria-label="Mobile">
-    <ul><li><a href="#system-map">System map</a></li><li><a href="#pathway">Start</a></li><li><a href="#tools">Guidance</a></li><li><a href="#health-check">Health check</a></li><li><a href="#planner">System planner</a></li><li><a href="#risk">Risk</a></li><li><a href="#evidence-base">Evidence</a></li><li><a href="#resources">Resources</a></li></ul>
+    <ul><li><a href="#system-map">System map</a></li><li><a href="#pathway">Start</a></li><li><a href="#decision-tools">Decision tools</a></li><li><a href="#tools">Guidance</a></li><li><a href="#health-check">Health check</a></li><li><a href="#planner">System planner</a></li><li><a href="#risk">Risk</a></li><li><a href="#evidence-base">Evidence</a></li><li><a href="#resources">Resources</a></li></ul>
     <a class="btn primary" href="#planner">Run a diagnostic</a>
   </nav></div></header>
 <main id="top">
@@ -366,7 +416,7 @@ body{background:var(--ct-bg);color:var(--ct-ink)}
         <div><strong>Source &amp; segregation</strong><p>What is generated, by whom, and how consistently is it separated?</p></div>
       </a>
       <span class="systemMapArrow" aria-hidden="true">→</span>
-      <a class="systemMapStage" href="#tools" role="listitem">
+      <a class="systemMapStage" href="#feedstock-grader" role="listitem">
         <span class="systemMapNum">02</span>
         <span class="systemMapIcon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 31h23l5-11h-9l-4-7H12l-4 18Z" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"/><circle cx="16" cy="35" r="4" fill="none" stroke="currentColor" stroke-width="2.8"/><circle cx="33" cy="35" r="4" fill="none" stroke="currentColor" stroke-width="2.8"/></svg></span>
         <div><strong>Collection &amp; aggregation</strong><p>Does enough material reach the system, reliably and with manageable contamination?</p></div>
@@ -497,7 +547,7 @@ body{background:var(--ct-bg);color:var(--ct-ink)}
       <p>Select a pathway. Each option takes you directly to the most useful tool or guidance for that objective.</p>
     </div>
     <div class="v3-pathways">
-      <a class="v3-path v3-path-link v3-reveal" href="#planner" aria-label="Build a new circular material system">
+      <a class="v3-path v3-path-link v3-reveal" href="#governance-selector" aria-label="Build a new circular material system">
         <div class="v3-path-icon" aria-hidden="true">
           <svg viewBox="0 0 48 48"><path d="M9 37h30M13 37V19l11-8 11 8v18M18 37V26h12v11" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M24 11V5M20 8h8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
         </div>
@@ -519,7 +569,7 @@ body{background:var(--ct-bg);color:var(--ct-ink)}
         <span class="v3-path-cta">Assess my facility <b>→</b></span>
       </a>
 
-      <a class="v3-path v3-path-link v3-reveal" href="#scale-module" aria-label="Scale an existing circularity model">
+      <a class="v3-path v3-path-link v3-reveal" href="#scale-readiness" aria-label="Scale an existing circularity model">
         <div class="v3-path-icon" aria-hidden="true">
           <svg viewBox="0 0 48 48"><path d="M10 36l9-9 7 5 12-17" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M31 15h7v7M10 10v28h28" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
@@ -533,6 +583,106 @@ body{background:var(--ct-bg);color:var(--ct-ink)}
   </div>
 </section>
 
+
+<section class="decisionSection" id="decision-tools">
+  <div class="container">
+    <div class="v3-head v3-reveal">
+      <span class="kicker">Decision tools</span>
+      <h2>Turn judgement calls into structured decisions</h2>
+      <p>Use these tools when the next step is unclear. They do not replace engineering, procurement or legal review — they make the decision logic explicit before you move forward.</p>
+    </div>
+    <div class="decisionShell v3-reveal">
+      <div class="decisionTabs" role="tablist" aria-label="Decision tools">
+        <button class="decisionTab active" type="button" role="tab" aria-selected="true" aria-controls="governance-selector" data-tool="governance-selector">
+          <span class="decisionTabIcon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16M6 20V9l6-5 6 5v11M9 20v-6h6v6"/></svg></span>
+          <span>Governance model selector</span>
+        </button>
+        <button class="decisionTab" type="button" role="tab" aria-selected="false" aria-controls="feedstock-grader" data-tool="feedstock-grader">
+          <span class="decisionTabIcon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16v12H4zM7 4h10v3M8 11h8M8 15h5"/></svg></span>
+          <span>Feedstock intake grader</span>
+        </button>
+        <button class="decisionTab" type="button" role="tab" aria-selected="false" aria-controls="scale-readiness" data-tool="scale-readiness">
+          <span class="decisionTabIcon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19l5-5 4 3 7-10"/><path d="M16 7h4v4"/></svg></span>
+          <span>Scale-readiness diagnostic</span>
+        </button>
+      </div>
+
+      <section class="decisionPanel active" id="governance-selector" role="tabpanel">
+        <div class="decisionHead">
+          <div><span class="decisionLabel">Build · Tool 01</span><h3>Governance model selector</h3><p>Match ownership, collection control, capital and operating capability to a practical governance model. The output is a structuring recommendation, not a procurement or legal determination.</p></div>
+          <span class="decisionType">6 model archetypes</span>
+        </div>
+        <div class="decisionGrid">
+          <form class="decisionForm" id="govForm">
+            <div class="decisionFields">
+              <div class="decisionField"><label for="govAssets">Who is best placed to own the core assets?</label><select id="govAssets"><option value="">Select</option><option value="public">Local body / public entity</option><option value="private">Private operator</option><option value="community">Cooperative / worker institution</option><option value="shared">Shared / not yet fixed</option></select></div>
+              <div class="decisionField"><label for="govCollection">Who controls collection and feedstock?</label><select id="govCollection"><option value="">Select</option><option value="public">Local body</option><option value="operator">Private operator</option><option value="community">Community / cooperative</option><option value="shared">Shared across parties</option></select></div>
+              <div class="decisionField"><label for="govCapex">Where can capital realistically come from?</label><select id="govCapex"><option value="">Select</option><option value="public">Primarily public / grant capital</option><option value="private">Primarily private capital</option><option value="shared">Blended / shared capital</option></select></div>
+              <div class="decisionField"><label for="govCapacity">Public-sector operating capacity</label><select id="govCapacity"><option value="">Select</option><option value="strong">Strong — can run daily operations</option><option value="moderate">Moderate — can monitor but not operate deeply</option><option value="limited">Limited — needs external operating capability</option></select></div>
+              <div class="decisionField"><label for="govMarket">Who can realistically manage offtake and price risk?</label><select id="govMarket"><option value="">Select</option><option value="operator">Operator / private party</option><option value="public">Public entity</option><option value="shared">Shared / structured risk</option></select></div>
+              <div class="decisionField"><label for="govInclusion">How central is worker ownership / inclusion?</label><select id="govInclusion"><option value="">Select</option><option value="core">Core design objective</option><option value="integrated">Important, but within another operating model</option><option value="standard">Standard workforce inclusion requirements</option></select></div>
+            </div>
+            <div class="decisionActionRow"><button class="btn primary" type="submit">Recommend a model</button><button class="btn ghost" type="button" id="govReset">Reset</button></div>
+            <div class="heuristicNote"><strong>How to use this result:</strong> treat the recommendation as a starting architecture. Procurement route, contract form, statutory approvals and state/local requirements still need specialist review.</div>
+          </form>
+          <div class="decisionResult" id="govResult" aria-live="polite">
+            <div class="decisionEmpty"><div><div class="decisionEmptyIcon">⌂</div><strong>Describe the operating context</strong><p>The selector will recommend a best-fit model and the issues that must be resolved before contracting.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="decisionPanel" id="feedstock-grader" role="tabpanel">
+        <div class="decisionHead">
+          <div><span class="decisionLabel">Build / Improve · Tool 02</span><h3>Feedstock intake grader</h3><p>Use a consistent first-pass grade for incoming dry-waste loads so the facility can decide whether to accept, pre-sort, quarantine or escalate the load.</p></div>
+          <span class="decisionType">A / B / C action grade</span>
+        </div>
+        <div class="decisionGrid">
+          <form class="decisionForm" id="feedForm">
+            <div class="decisionFields">
+              <div class="decisionField"><label for="feedSource">Source type</label><select id="feedSource"><option value="">Select</option><option value="household">Household route</option><option value="bwg">Bulk generator / commercial</option><option value="feeder">Feeder centre / aggregation point</option><option value="mixed">Mixed / unknown source</option></select></div>
+              <div class="decisionField"><label for="feedSeg">Segregation at arrival</label><select id="feedSeg"><option value="">Select</option><option value="dry">Clearly dry-waste stream</option><option value="mostly">Mostly dry, some mixing</option><option value="mixed">Mixed waste</option></select></div>
+              <div class="decisionField"><label for="feedContam">Visible contamination (%)</label><input id="feedContam" type="number" min="0" max="100" step="1" placeholder="e.g. 8"><span class="decisionHelp">Toolkit heuristic used only for first-pass grading</span></div>
+              <div class="decisionField"><label for="feedMoisture">Moisture / wet contamination</label><select id="feedMoisture"><option value="">Select</option><option value="dry">Dry</option><option value="damp">Slightly damp / localised wet fraction</option><option value="wet">Wet / putrescible contamination present</option></select></div>
+              <div class="decisionField"><label for="feedSpecial">Sanitary / special-care / hazardous items</label><select id="feedSpecial"><option value="">Select</option><option value="none">None observed</option><option value="suspected">Suspected / isolated items</option><option value="present">Clearly present in load</option></select></div>
+              <div class="decisionField"><label for="feedBulky">Bulky / non-processable material</label><select id="feedBulky"><option value="">Select</option><option value="none">None / negligible</option><option value="manageable">Manageable with pre-sort</option><option value="significant">Significant obstruction to normal line</option></select></div>
+            </div>
+            <div class="decisionActionRow"><button class="btn primary" type="submit">Grade this load</button><button class="btn ghost" type="button" id="feedReset">Reset</button></div>
+            <div class="heuristicNote"><strong>Important:</strong> the A/B/C thresholds are toolkit operating heuristics, not statutory acceptance standards. Special-care or hazardous material should follow the applicable segregation, isolation and authorised-channel requirements.</div>
+          </form>
+          <div class="decisionResult" id="feedResult" aria-live="polite">
+            <div class="decisionEmpty"><div><div class="decisionEmptyIcon">✓</div><strong>Assess an incoming load</strong><p>The grader will return the intake grade, handling action, reason and feedback to send upstream.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="decisionPanel" id="scale-readiness" role="tabpanel">
+        <div class="decisionHead">
+          <div><span class="decisionLabel">Scale · Tool 03</span><h3>Scale-readiness diagnostic</h3><p>Check whether the current operating model is strong enough to absorb growth — and identify the most logical route to scale.</p></div>
+          <span class="decisionType">7 readiness dimensions</span>
+        </div>
+        <div class="decisionGrid">
+          <form class="decisionForm" id="scaleForm">
+            <div class="decisionFields">
+              <div class="decisionField"><label for="scalePerformance">Core performance has been stable for at least 3 months</label><select id="scalePerformance" data-scale-label="Stable baseline performance"><option value="">Select</option><option value="2">Yes</option><option value="1">Partly / unevenly</option><option value="0">No</option></select></div>
+              <div class="decisionField"><label for="scaleFeedstock">Incremental feedstock can be secured</label><select id="scaleFeedstock" data-scale-label="Secured incremental feedstock"><option value="">Select</option><option value="2">Yes</option><option value="1">Partly / under discussion</option><option value="0">No</option></select></div>
+              <div class="decisionField"><label for="scaleMarkets">Buyers can absorb incremental recovered material</label><select id="scaleMarkets" data-scale-label="Confirmed downstream demand"><option value="">Select</option><option value="2">Yes</option><option value="1">Partly / some streams</option><option value="0">No</option></select></div>
+              <div class="decisionField"><label for="scaleSystems">SOPs, data and maintenance routines are repeatable</label><select id="scaleSystems" data-scale-label="Repeatable operating systems"><option value="">Select</option><option value="2">Yes</option><option value="1">Partly</option><option value="0">No</option></select></div>
+              <div class="decisionField"><label for="scalePeople">Supervisory and technical bench is ready</label><select id="scalePeople" data-scale-label="People and leadership bench"><option value="">Select</option><option value="2">Yes</option><option value="1">Partly</option><option value="0">No</option></select></div>
+              <div class="decisionField"><label for="scaleFinance">CAPEX, working capital and cash cycle are funded</label><select id="scaleFinance" data-scale-label="Financing and working capital"><option value="">Select</option><option value="2">Yes</option><option value="1">Partly / conditional</option><option value="0">No</option></select></div>
+              <div class="decisionField"><label for="scaleCompliance">Registrations, reporting and key contracts are current</label><select id="scaleCompliance" data-scale-label="Compliance and contracts"><option value="">Select</option><option value="2">Yes</option><option value="1">Minor gaps</option><option value="0">No</option></select></div>
+              <div class="decisionField"><label for="scaleOpportunity">Where is the strongest growth opportunity?</label><select id="scaleOpportunity"><option value="">Select</option><option value="feedstock">More feedstock / catchment coverage</option><option value="capacity">More processing capacity</option><option value="value">Higher-value processing / new materials</option><option value="services">New services / traceability / EPR-linked uptake</option><option value="geography">New geography / replication</option><option value="unsure">Not yet clear</option></select></div>
+            </div>
+            <div class="decisionActionRow"><button class="btn primary" type="submit">Assess scale readiness</button><button class="btn ghost" type="button" id="scaleReset">Reset</button></div>
+            <div class="heuristicNote"><strong>Scoring:</strong> Yes = 2, Partial = 1, No = 0. The readiness bands are toolkit heuristics. A weak compliance, market or baseline-performance answer is treated as a gating condition.</div>
+          </form>
+          <div class="decisionResult" id="scaleResult" aria-live="polite">
+            <div class="decisionEmpty"><div><div class="decisionEmptyIcon">↗</div><strong>Test the base before adding complexity</strong><p>The diagnostic will show readiness, gating gaps and the most logical growth route.</p></div></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
 
 <section class="v3-section v3-dark" id="tools">
   <div class="container">
@@ -558,9 +708,16 @@ body{background:var(--ct-bg);color:var(--ct-ink)}
 </div>
 <div class="module-v3 v3-reveal">
 
-      <details open><summary><span class="mnum">01</span><span><span class="mtitle">Context & governance</span><span class="msub">Ownership · collection responsibility · incentives</span></span><span class="plus">+</span></summary>
-        <div class="mbody"><p>Choose an operating model that matches institutional capacity, feedstock control and revenue logic.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Who owns assets and material value?</li><li>Who controls collection and feedstock?</li><li>Public, private, PPP O&M, concession, hybrid or cooperative?</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>Responsibilities are explicit</li><li>Feedstock commitments are clear</li><li>Revenue and residue risks have owners</li></ul></div></div></div>
-      </details>
+      <details open id="governance-module"><summary><span class="mnum">01</span><span><span class="mtitle">Context & governance</span><span class="msub">Ownership · registration · roles · incentives</span></span><span class="plus">+</span></summary>
+  <div class="mbody">
+    <p class="moduleIntro">Choose the operating model only after clarifying who controls assets, feedstock, service obligations, material value and performance accountability.</p>
+    <div class="mbody-grid depth3">
+      <div class="mbox"><span class="microtag">Decision guide</span><b>What to decide</b><ul><li>Who owns the site, building and equipment?</li><li>Who is responsible for collection, sorting, residue disposal and downstream sales?</li><li>Which revenue streams belong to the operator, local body or partner?</li><li>What happens when tonnage, quality or payments fall below plan?</li></ul></div>
+      <div class="mbox"><span class="microtag">Operating practice</span><b>What good looks like</b><ul><li>Use a single accountability map for land, feedstock, operations, sales and reporting</li><li>Tie operator incentives to controllable KPIs rather than only tonnes handled</li><li>Make residue-disposal responsibility and cost explicit</li><li>Avoid models where an operator carries market risk without control over feedstock quality</li></ul></div>
+      <div class="mbox regbox"><span class="microtag">Regulatory / evidence</span><b>What is grounded</b><ul><li>Under SWM Rules 2026, an entity sorting recyclable/non-recyclable waste at an MRF must be registered with the local body</li><li>MRFs must operate in line with CPCB/MoHUA guidance and deal only with entities whose registration is mandated under the rules</li><li>Local bodies may determine the cost of MRF services through due procedure</li></ul></div>
+    </div>
+    <div class="moduleSource">Evidence base: <a href="https://moef.gov.in/uploads/pdf-uploads/pdf_69a16e3b04c107.91022257.pdf" target="_blank" rel="noopener">SWM Rules 2026 · MoEFCC</a> · <a href="https://www.swm.cpcb.gov.in/" target="_blank" rel="noopener">CPCB SWM Portal</a></div>
+  </div></details>
 
       <details id="feedstock-module"><summary><span class="mnum">02</span><span><span class="mtitle">Feedstock & collection</span><span class="msub">Four-stream segregation · source quality · routing · intake</span></span><span class="plus">+</span></summary>
   <div class="mbody">
@@ -896,6 +1053,111 @@ $('plannerForm').addEventListener('submit',e=>{e.preventDefault();calc()});$('pl
   });
   if($('printPlan'))$('printPlan').addEventListener('click',function(){window.print();});
   if($('year'))$('year').textContent=new Date().getFullYear();
+})();
+</script>
+
+
+<script>
+(function(){
+  var q=function(s,r){return (r||document).querySelector(s)}, qa=function(s,r){return Array.from((r||document).querySelectorAll(s))};
+
+  // Tool tabs + deep-linking
+  var tabs=qa('.decisionTab'), panels=qa('.decisionPanel');
+  function openTool(id,scroll){
+    panels.forEach(function(p){p.classList.toggle('active',p.id===id);});
+    tabs.forEach(function(t){var a=t.dataset.tool===id;t.classList.toggle('active',a);t.setAttribute('aria-selected',a?'true':'false');});
+    if(scroll){var p=document.getElementById(id);if(p)p.scrollIntoView({behavior:'smooth',block:'start'});}
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){openTool(t.dataset.tool,false);history.replaceState(null,'','#'+t.dataset.tool);});});
+  function hashTool(){var id=location.hash.slice(1);if(['governance-selector','feedstock-grader','scale-readiness'].includes(id))openTool(id,false);}
+  hashTool();window.addEventListener('hashchange',hashTool);
+  ['governance-selector','feedstock-grader','scale-readiness'].forEach(function(id){document.querySelectorAll('a[href="#'+id+'"]').forEach(function(a){a.addEventListener('click',function(){openTool(id,false);});});});
+
+  // Governance selector
+  var models={
+    ulb:{name:'Publicly owned and operated',short:'ULB-operated',why:'Best suited where the public entity controls assets and collection and has strong day-to-day operating capability.',watch:'The model can become administratively heavy if staffing, maintenance or market decisions are slow.',clarify:['Operating staffing and specialist roles','Material-sale authority and revenue retention','Maintenance budget and procurement speed','Performance accountability within the public system']},
+    om:{name:'Public asset + private O&M',short:'PPP O&M',why:'Best suited where the public side owns infrastructure and feedstock while a specialist operator runs daily operations against service standards.',watch:'Poorly designed O&M contracts can make the operator accountable for outcomes it cannot control, especially feedstock quality or collection reliability.',clarify:['Feedstock and minimum-service commitments','Service fee and performance-linked payment logic','Who owns material revenue and residue cost','KPIs, penalties, escalation and handback conditions']},
+    concession:{name:'Performance-linked concession',short:'PPP concession',why:'Best suited where private capability and capital can be combined with public feedstock, land or service rights over a defined contract period.',watch:'Risk transfer must be proportionate. The concession can fail if market, tonnage and payment risks are pushed to the operator without corresponding control.',clarify:['Capital obligations and asset ownership at term end','Tonnage / collection commitments','Revenue stack and market-risk allocation','Contract duration, performance security and termination logic']},
+    private:{name:'Privately financed and operated',short:'Private-led',why:'Best suited where the operator can secure feedstock, finance infrastructure, manage markets and operate with limited dependence on public systems.',watch:'The model is vulnerable if feedstock access or land tenure is informal, short-term or dependent on one counterparty.',clarify:['Long-term feedstock rights','Land / facility tenure','Authorised downstream channels and reporting','Commercial exposure to price and volume volatility']},
+    coop:{name:'Cooperative or worker-led model',short:'Cooperative / worker-led',why:'Best suited where worker ownership, livelihood inclusion and local collection relationships are central to the model and the institution has—or can build—commercial and managerial capability.',watch:'Strong social ownership does not remove the need for technical management, financial controls, market discipline and maintenance capability.',clarify:['Governance and management roles','Commercial decision rights','Working capital and buyer relationships','Training, equipment and professional support']},
+    hybrid:{name:'Hybrid partnership model',short:'Hybrid',why:'Best suited where ownership, capital, collection and operating capability need to be shared across public, private and/or community actors.',watch:'Hybrid models become fragile when “shared responsibility” is not translated into named owners, service levels and payment rules.',clarify:['One accountable owner for each system function','Interfaces between collection and processing','Revenue, cost and risk allocation','Decision rights when partners disagree']}
+  };
+  var maps={
+    assets:{public:{ulb:3,om:3,concession:2,hybrid:2},private:{private:3,concession:2},community:{coop:4,hybrid:2},shared:{hybrid:4,concession:2,om:1}},
+    collection:{public:{ulb:2,om:3,hybrid:1},operator:{private:3,concession:3},community:{coop:4,hybrid:2},shared:{hybrid:4,om:1,concession:1}},
+    capex:{public:{ulb:2,om:3,hybrid:1},private:{private:3,concession:4},shared:{hybrid:4,concession:2,om:1}},
+    capacity:{strong:{ulb:4,hybrid:1},moderate:{om:3,hybrid:3,concession:1},limited:{concession:3,private:2,om:2,hybrid:1}},
+    market:{operator:{private:3,concession:3,om:1},public:{ulb:2,hybrid:1},shared:{hybrid:4,om:1,concession:1}},
+    inclusion:{core:{coop:5,hybrid:3},integrated:{hybrid:3,om:1,concession:1,coop:1},standard:{ulb:1,om:1,concession:1,private:1,hybrid:1}}
+  };
+  var gf=q('#govForm');
+  if(gf)gf.addEventListener('submit',function(e){
+    e.preventDefault();
+    var vals={assets:q('#govAssets').value,collection:q('#govCollection').value,capex:q('#govCapex').value,capacity:q('#govCapacity').value,market:q('#govMarket').value,inclusion:q('#govInclusion').value};
+    if(Object.values(vals).some(function(v){return !v;})){q('#govResult').innerHTML='<div class="decisionEmpty"><div><div class="decisionEmptyIcon">!</div><strong>Complete all six context questions</strong><p>The selector needs the full operating context to make a useful recommendation.</p></div></div>';return;}
+    var score={ulb:0,om:0,concession:0,private:0,coop:0,hybrid:0};
+    Object.keys(vals).forEach(function(k){var m=maps[k][vals[k]]||{};Object.keys(m).forEach(function(model){score[model]+=m[model];});});
+    var ranked=Object.entries(score).sort(function(a,b){return b[1]-a[1];}), best=ranked[0][0], second=ranked[1][0], bm=models[best], sm=models[second];
+    q('#govResult').innerHTML='<span class="resultEyebrow">Recommended starting architecture</span><h3 class="resultTitle">'+bm.name+'</h3><p class="resultLead">'+bm.why+'</p><span class="resultStatus good">Best fit from the inputs provided</span><div class="resultBlocks"><div class="resultBlock"><b>Must clarify before contracting</b><ul>'+bm.clarify.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></div><div class="resultBlock"><b>Primary watch-out</b><ul><li>'+bm.watch+'</li><li>Alternative to test: '+sm.name+'</li></ul></div><div class="resultBlock full"><b>Suggested next action</b><ul><li>Draft a one-page accountability map covering land, feedstock, operations, residue, sales, reporting and payment</li><li>Use the governance module to translate this architecture into contract principles</li></ul></div></div><div class="toolJumpRow"><a href="#governance-module">Open governance guidance →</a><a href="#planner">Test the system economics →</a></div><div class="resultMeta">Decision aid only · procurement, legal structure and statutory approvals require context-specific review</div>';
+  });
+  var gr=q('#govReset');if(gr)gr.addEventListener('click',function(){gf.reset();q('#govResult').innerHTML='<div class="decisionEmpty"><div><div class="decisionEmptyIcon">⌂</div><strong>Describe the operating context</strong><p>The selector will recommend a best-fit model and the issues that must be resolved before contracting.</p></div></div>';});
+
+  // Feedstock grader
+  var ff=q('#feedForm');
+  if(ff)ff.addEventListener('submit',function(e){
+    e.preventDefault();
+    var source=q('#feedSource').value,seg=q('#feedSeg').value,contRaw=q('#feedContam').value,moist=q('#feedMoisture').value,special=q('#feedSpecial').value,bulky=q('#feedBulky').value;
+    if(!source||!seg||contRaw===''||!moist||!special||!bulky){q('#feedResult').innerHTML='<div class="decisionEmpty"><div><div class="decisionEmptyIcon">!</div><strong>Complete the intake observations</strong><p>All six observations are needed for a consistent first-pass grade.</p></div></div>';return;}
+    var cont=Math.max(0,Math.min(100,Number(contRaw))), grade='A', reasons=[], actions=[], feedback=[];
+    if(special==='present'||seg==='mixed'||moist==='wet'||cont>25||bulky==='significant')grade='C';
+    else if(special==='suspected'||seg==='mostly'||moist==='damp'||cont>5||bulky==='manageable')grade='B';
+    if(seg==='mixed')reasons.push('Load is not a distinct dry-waste stream');
+    if(cont>25)reasons.push('Visible contamination is above the toolkit C-grade trigger');
+    else if(cont>5)reasons.push('Visible contamination is above the toolkit A-grade trigger');
+    if(moist==='wet')reasons.push('Wet / putrescible contamination is present');
+    else if(moist==='damp')reasons.push('Moisture may reduce sorting quality and material value');
+    if(special==='present')reasons.push('Sanitary / special-care / hazardous items are clearly present');
+    else if(special==='suspected')reasons.push('Special-care items require isolation and verification');
+    if(bulky==='significant')reasons.push('Bulky material obstructs normal processing');
+    else if(bulky==='manageable')reasons.push('Pre-sort is required for bulky material');
+    if(!reasons.length)reasons.push('Load appears clean, segregated and compatible with the normal dry-waste line');
+    if(grade==='A'){actions=['Accept into the standard dry-waste sorting flow','Record source, weight and grade at intake','Maintain normal visual QC during sorting'];feedback=['Share positive feedback with the source / collection route','Continue monitoring quality trend by source'];}
+    if(grade==='B'){actions=['Conditionally accept if the facility SOP allows','Route through pre-sort / rework before the normal line','Isolate wet, special-care or non-processable fractions','Record the reason for downgrade against the source'];feedback=['Send targeted feedback on the specific quality issue','Track whether the same source improves over subsequent loads'];}
+    if(grade==='C'){actions=['Do not send directly into the normal dry-waste sorting line','Quarantine / isolate the load or affected fraction','Follow applicable SOP for sanitary, special-care, hazardous or non-processable material','Document the event and escalate persistent non-conformance'];feedback=['Contact the source / collection owner before the next pickup','Address segregation or routing failure upstream rather than repeatedly absorbing it at the MRF'];}
+    var cls=grade.toLowerCase(), label=grade==='A'?'Accept — standard sorting':grade==='B'?'Conditional accept — pre-sort required':'Quarantine / reject from normal dry line';
+    q('#feedResult').innerHTML='<div class="gradeBadge '+cls+'">'+grade+'</div><span class="resultEyebrow">Intake action</span><h3 class="resultTitle">'+label+'</h3><p class="resultLead">'+reasons[0]+'.</p><div class="resultBlocks"><div class="resultBlock"><b>Why this grade</b><ul>'+reasons.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></div><div class="resultBlock"><b>Handling action</b><ul>'+actions.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></div><div class="resultBlock full"><b>Upstream feedback</b><ul>'+feedback.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></div></div><div class="toolJumpRow"><a href="#feedstock-module">Open feedstock guidance →</a><a href="#quality-module">Open quality guidance →</a></div><div class="resultMeta">A/B/C cut-offs are toolkit heuristics · applicable waste-stream rules and site SOPs take precedence</div>';
+  });
+  var fr=q('#feedReset');if(fr)fr.addEventListener('click',function(){ff.reset();q('#feedResult').innerHTML='<div class="decisionEmpty"><div><div class="decisionEmptyIcon">✓</div><strong>Assess an incoming load</strong><p>The grader will return the intake grade, handling action, reason and feedback to send upstream.</p></div></div>';});
+
+  // Scale readiness
+  var sf=q('#scaleForm');
+  var routeMap={
+    feedstock:{name:'Expand feedstock and catchment',why:'The opportunity is to use the existing operating platform more fully by securing additional material and collection coverage.',actions:['Validate source-wise volume and quality before committing capacity','Secure feedstock through service agreements or defined collection responsibilities','Check whether logistics cost changes the unit economics']},
+    capacity:{name:'Add processing capacity',why:'The opportunity is to relieve a real capacity constraint rather than simply build more infrastructure.',actions:['Confirm sustained utilisation and bottleneck evidence','Model the incremental line / shift / equipment economics','Secure downstream demand before commissioning extra capacity']},
+    value:{name:'Move up the material-value curve',why:'The opportunity is to increase value per tonne through better quality, deeper sorting or selected value-addition.',actions:['Identify material streams with buyer-backed value upside','Test quality specification and yield before CAPEX','Avoid adding processing steps without proven market demand']},
+    services:{name:'Add service and traceability layers',why:'The opportunity is to monetise operating capability through collection, reporting, traceability or EPR-linked uptake services.',actions:['Define the service problem and paying counterparty','Standardise data and reporting before selling the service','Confirm applicable registration / waste-stream requirements']},
+    geography:{name:'Replicate into a new geography',why:'The opportunity is to reproduce a proven model rather than expand one site indefinitely.',actions:['Codify SOPs, contracts, data definitions and staffing model','Choose a geography with comparable feedstock density and market access','Build local operating capability before transferring volume targets']},
+    unsure:{name:'Do not choose the scale route yet',why:'The base may be ready for growth, but the growth thesis is not yet specific enough.',actions:['Compare feedstock, capacity, value-add, service and geography cases','Choose the route that improves system economics or service performance most clearly','Do not commit CAPEX until the binding opportunity is explicit']}
+  };
+  if(sf)sf.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ids=['scalePerformance','scaleFeedstock','scaleMarkets','scaleSystems','scalePeople','scaleFinance','scaleCompliance'];
+    var vals=ids.map(function(id){return q('#'+id).value;});
+    var opp=q('#scaleOpportunity').value;
+    if(vals.some(function(v){return v==='';})||!opp){q('#scaleResult').innerHTML='<div class="decisionEmpty"><div><div class="decisionEmptyIcon">!</div><strong>Complete all readiness dimensions</strong><p>The diagnostic needs the full operating picture because one weak gate can change the scale recommendation.</p></div></div>';return;}
+    var score=vals.reduce(function(a,v){return a+Number(v);},0), pct=Math.round(score/14*100);
+    var hardNo=['scalePerformance','scaleMarkets','scaleCompliance'].filter(function(id){return q('#'+id).value==='0';});
+    var status,cls;
+    if(score>=12 && hardNo.length===0){status='Ready to scale';cls='good';}
+    else if(score>=8 && hardNo.length===0){status='Scale with conditions';cls='watch';}
+    else if(score>=10 && hardNo.length>0){status='Fix gating conditions before scaling';cls='risk';}
+    else {status='Strengthen the base before scaling';cls='risk';}
+    var gaps=ids.filter(function(id){return Number(q('#'+id).value)<2;}).map(function(id){var el=q('#'+id);var label=el.dataset.scaleLabel;var v=Number(el.value);return label+' — '+(v===0?'not in place':'partly in place');});
+    var route=routeMap[opp];
+    var next = cls==='good'?'Move to a scoped scale case with explicit volume, economics, owners and milestones.':cls==='watch'?'Close the partial readiness gaps in parallel with a limited scale pilot.':'Do not add major fixed capacity or geographic complexity until the gating gaps are closed.';
+    q('#scaleResult').innerHTML='<span class="resultEyebrow">Readiness score</span><h3 class="resultTitle">'+status+'</h3><div class="scoreBar"><span style="width:'+pct+'%"></span></div><span class="resultStatus '+cls+'">'+score+' / 14 · '+pct+'%</span><p class="resultLead">'+route.name+' is the strongest stated opportunity. '+route.why+'</p><div class="resultBlocks"><div class="resultBlock"><b>Gaps to close</b><ul>'+(gaps.length?gaps.map(function(x){return '<li>'+x+'</li>';}).join(''):'<li>No material readiness gaps from the answers provided</li>')+'</ul></div><div class="resultBlock"><b>Route-specific checks</b><ul>'+route.actions.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></div><div class="resultBlock full"><b>Recommended next action</b><ul><li>'+next+'</li></ul></div></div><div class="toolJumpRow"><a href="#scale-module">Open scale guidance →</a><a href="#planner">Test the expanded economics →</a></div><div class="resultMeta">Readiness scoring is a toolkit heuristic · use verified operational data and context-specific approvals before committing investment</div>';
+  });
+  var sr=q('#scaleReset');if(sr)sr.addEventListener('click',function(){sf.reset();q('#scaleResult').innerHTML='<div class="decisionEmpty"><div><div class="decisionEmptyIcon">↗</div><strong>Test the base before adding complexity</strong><p>The diagnostic will show readiness, gating gaps and the most logical growth route.</p></div></div>';});
 })();
 </script>
 
