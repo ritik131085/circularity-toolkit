@@ -1,0 +1,29 @@
+name: Apply V3.3 opening banner
+
+on:
+  push:
+    paths:
+      - 'scripts/apply_banner.py'
+      - '.github/workflows/apply-banner.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply controlled patch
+        run: python3 scripts/apply_banner.py
+      - name: Commit updated toolkit
+        run: |
+          if git diff --quiet index.html; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Refine V3.3 opening banner and system map"
+          git push
