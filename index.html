@@ -111,88 +111,147 @@
 .v3-section{padding:66px 0}
 }
 
+
+/* ===== V3 intro sequence refinement ===== */
+.v3-about-hero{display:grid;grid-template-columns:1.08fr .92fr;gap:42px;align-items:center}
+.v3-about-hero h2{font-size:clamp(36px,5vw,58px);letter-spacing:-.05em;line-height:1.02;margin:10px 0 16px}
+.v3-about-hero p{font-size:17px;color:var(--muted);margin:0 0 14px}
+.v3-about-visual{border:1px solid var(--line);border-radius:28px;padding:18px;background:linear-gradient(145deg,#f6f9ff,#eaf1ff);box-shadow:var(--shadow)}
+.v3-audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.v3-audience-card{border:1px solid var(--line);border-radius:20px;padding:21px;background:#fff;box-shadow:var(--shadow);transition:transform .25s ease,box-shadow .25s ease}
+.v3-audience-card:hover{transform:translateY(-4px);box-shadow:0 24px 65px rgba(11,31,58,.12)}
+.v3-audience-icon{width:38px;height:38px;border-radius:12px;background:#eaf0ff;color:#1f5eff;display:grid;place-items:center;font-size:11px;font-weight:900}
+.v3-audience-card h3{font-size:18px;line-height:1.2;margin:13px 0 7px}
+.v3-audience-card p{font-size:14px;color:var(--muted);margin:0}
+.v3-find-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.v3-find-card{border:1px solid var(--line);border-radius:20px;padding:22px;background:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.v3-find-card:after{content:"";position:absolute;width:90px;height:90px;border-radius:50%;right:-40px;bottom:-40px;background:rgba(31,94,255,.06)}
+.v3-find-card b{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#1f5eff}
+.v3-find-card h3{font-size:19px;margin:9px 0 7px}
+.v3-find-card p{margin:0;color:var(--muted);font-size:14px}
+.v3-how-section{background:linear-gradient(135deg,#0d2343,#133a70);color:#fff}
+.v3-how-section .v3-head p{color:#c4d3e8}
+.v3-how-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:12px;align-items:stretch}
+.v3-how-step{border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:20px;background:rgba(255,255,255,.07)}
+.v3-how-step>span{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#2e66ff;color:#fff;font-size:11px;font-weight:900;margin-bottom:15px}
+.v3-how-step b{font-size:16px}
+.v3-how-step p{font-size:13px;color:#bfd0e8;margin:5px 0 0}
+.v3-how-arrow{display:grid;place-items:center;color:#7ca8ff;font-size:24px}
+.v3-six-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.v3-six-card{border:1px solid var(--line);border-radius:20px;padding:22px;background:#fff;box-shadow:var(--shadow)}
+.v3-six-card>span{font-size:11px;font-weight:900;color:#1f5eff}
+.v3-six-card h3{font-size:20px;margin:8px 0 7px}
+.v3-six-card p{margin:0;color:var(--muted);font-size:14px}
+.v3-core-callout{display:grid;grid-template-columns:.8fr 1.2fr;gap:26px;align-items:center;margin-top:18px;border-radius:24px;padding:26px;background:linear-gradient(135deg,#0f2a4f,#16417b);color:#fff}
+.v3-core-callout h3{font-size:29px;letter-spacing:-.035em;margin:4px 0 0}
+.v3-core-callout p{margin:0;color:#c8d7ec;font-size:17px}
+@media(max-width:900px){
+.v3-about-hero,.v3-core-callout{grid-template-columns:1fr}
+.v3-audience-grid,.v3-find-grid,.v3-six-grid{grid-template-columns:1fr 1fr}
+.v3-how-flow{grid-template-columns:1fr}.v3-how-arrow{transform:rotate(90deg)}
+}
+@media(max-width:620px){
+.v3-audience-grid,.v3-find-grid,.v3-six-grid{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 <body>
-<header class="header"><div class="container nav"><a class="brand" href="#top"><span class="mark">↻</span><span>Circularity Toolkit</span></a><nav class="links"><a href="#about">About</a><a href="#pathway">Pathways</a><a href="#tools">Modules</a><a href="#health-check">Diagnostics</a><a href="#risk">Risk</a><a href="#resources">Resources</a></nav><a class="cta" href="#planner">Run a diagnostic</a></div></header>
+<header class="header"><div class="container nav"><a class="brand" href="#top"><span class="mark">↻</span><span>Circularity Toolkit</span></a><nav class="links"><a href="#about">About</a><a href="#who">For whom</a><a href="#find">What’s inside</a><a href="#pathway">Pathways</a><a href="#tools">Modules</a><a href="#health-check">Diagnostics</a></nav><a class="cta" href="#planner">Run a diagnostic</a></div></header>
 <main id="top">
-<section class="hero"><div class="container heroGrid"><div><span class="kicker">A practical toolkit for circular material systems</span><h1>Build circular systems that <span>work in practice.</span></h1><p class="lede">A practical toolkit for designing, operating and scaling material recovery systems — connecting behaviour, people, infrastructure, markets and financial viability.</p><div class="actions"><a class="btn primary" href="#planner">Build a first-cut system</a><a class="btn ghost" href="#tools">Explore the toolkit</a></div><div class="note">For operators, cities, waste-management organisations, funders, corporate teams and ecosystem partners.</div></div><aside class="system"><div class="systemHead"><span>System view</span><span class="pill">Start here</span></div><div class="flow"><div class="node"><b>1</b><span><strong>Material</strong><small>What is generated?</small></span></div><div class="node"><b>2</b><span><strong>Collection</strong><small>What reaches the system?</small></span></div><div class="node"><b>3</b><span><strong>Recovery</strong><small>What can be captured?</small></span></div><div class="node"><b>4</b><span><strong>Market</strong><small>Who takes the output?</small></span></div></div><div class="systemFooter"><span>Infrastructure is only one layer.</span><strong>Design the full system.</strong></div></aside></div></section>
+<section class="hero"><div class="container heroGrid"><div><span class="kicker">A practical toolkit for circular material systems</span><h1>Build circular systems that <span>work in practice.</span></h1><p class="lede">A practical toolkit for designing, operating and scaling material recovery systems — connecting behaviour, people, infrastructure, markets and financial viability.</p><div class="actions"><a class="btn primary" href="#about">Explore the toolkit</a><a class="btn ghost" href="#pathway">Choose your pathway</a></div><div class="note">For operators, cities, waste-management organisations, funders, corporate teams and ecosystem partners.</div></div><aside class="system"><div class="systemHead"><span>System view</span><span class="pill">Start here</span></div><div class="flow"><div class="node"><b>1</b><span><strong>Material</strong><small>What is generated?</small></span></div><div class="node"><b>2</b><span><strong>Collection</strong><small>What reaches the system?</small></span></div><div class="node"><b>3</b><span><strong>Recovery</strong><small>What can be captured?</small></span></div><div class="node"><b>4</b><span><strong>Market</strong><small>Who takes the output?</small></span></div></div><div class="systemFooter"><span>Infrastructure is only one layer.</span><strong>Design the full system.</strong></div></aside></div></section>
+
 
 <section class="v3-section" id="about">
   <div class="container">
-    <div class="v3-head v3-reveal">
-      <span class="kicker">About this toolkit</span>
-      <h2>Who it is for, what you will find, and how to use it</h2>
-      <p>A practitioner-first decision resource for teams designing, operating, funding and scaling circular material systems.</p>
+    <div class="v3-about-hero v3-reveal">
+      <div>
+        <span class="kicker">About the Toolkit</span>
+        <h2>A practical guide to designing, operating and scaling circular material systems.</h2>
+        <p>This toolkit brings together field-oriented guidance, diagnostics, benchmarks and practical tools across the full circularity system — from source segregation and collection to facility operations, workforce, material recovery, markets and financial viability.</p>
+        <p>It is designed to help practitioners answer three questions: <strong>How should I build the system?</strong> <strong>How do I improve what is already operating?</strong> <strong>How do I scale a model that works?</strong></p>
+      </div>
+      <div class="v3-about-visual">
+        <svg class="v3-float" viewBox="0 0 420 300" aria-hidden="true">
+          <defs>
+            <linearGradient id="abg" x1="55" y1="30" x2="370" y2="280">
+              <stop stop-color="#2e66ff"/><stop offset="1" stop-color="#7aa5ff"/>
+            </linearGradient>
+          </defs>
+          <rect width="420" height="300" rx="30" fill="#eef4ff"/>
+          <circle cx="210" cy="150" r="72" fill="white"/>
+          <circle cx="210" cy="150" r="48" fill="url(#abg)"/>
+          <path d="M224 126c-4-10-12-17-22-18-14-1-25 9-25 22 0 12 10 22 23 22h18c12 0 21 9 21 20s-9 20-21 20c-9 0-16-5-20-13" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+          <path d="M236 126V103M186 199v-23" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+          <rect x="38" y="111" width="88" height="74" rx="18" fill="#fff"/>
+          <path d="M57 137l25-17 25 17v22c0 7-5 12-12 12H69c-7 0-12-5-12-12v-22Z" fill="#79a4ff"/>
+          <rect x="294" y="109" width="88" height="76" rx="18" fill="#fff"/>
+          <rect x="312" y="131" width="52" height="35" rx="8" fill="#2e66ff"/>
+          <path d="M322 142h31M322 153h24" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+          <rect x="165" y="26" width="90" height="68" rx="18" fill="#fff"/>
+          <circle cx="210" cy="52" r="15" fill="#7aa5ff"/>
+          <path d="M210 67v14M196 80h28" stroke="#2e66ff" stroke-width="5" stroke-linecap="round"/>
+          <rect x="165" y="211" width="90" height="64" rx="18" fill="#fff"/>
+          <rect x="183" y="230" width="54" height="19" rx="9" fill="#7aa5ff"/>
+          <path d="M183 258h54" stroke="#2e66ff" stroke-width="6" stroke-linecap="round"/>
+          <path d="M126 150h34M260 150h34M210 94v10M210 196v15" stroke="#91b4ff" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 13"/>
+        </svg>
+      </div>
     </div>
-    <div class="v3-grid3">
-      <article class="v3-card v3-reveal">
-        <div class="v3-iconbox">
-          <svg viewBox="0 0 240 130" aria-hidden="true">
-            <rect x="18" y="20" width="204" height="92" rx="24" fill="#fff"/>
-            <circle cx="82" cy="54" r="20" fill="#78a3ff"/><circle cx="126" cy="47" r="17" fill="#2e66ff"/><circle cx="164" cy="57" r="19" fill="#a8c2ff"/>
-            <path d="M54 98c0-18 14-31 32-31h76c18 0 32 13 32 31" fill="#dbe7ff"/>
-            <path d="M104 98c0-15 10-25 24-25s25 10 25 25" fill="#7ea7ff"/>
-          </svg>
-        </div>
-        <h3>Who it is for</h3>
-        <ul>
-          <li>MRF operators and plant managers</li>
-          <li>Urban Local Bodies and government teams</li>
-          <li>Waste-management organisations and social enterprises</li>
-          <li>Corporate sustainability, EPR and CSR teams</li>
-          <li>Funders, philanthropies and implementation partners</li>
-        </ul>
-      </article>
-      <article class="v3-card v3-reveal">
-        <div class="v3-iconbox">
-          <svg viewBox="0 0 240 130" aria-hidden="true">
-            <rect x="50" y="16" width="94" height="100" rx="18" fill="#fff"/>
-            <rect x="68" y="40" width="55" height="8" rx="4" fill="#dbe7ff"/><rect x="68" y="58" width="42" height="8" rx="4" fill="#dbe7ff"/><rect x="68" y="76" width="50" height="8" rx="4" fill="#dbe7ff"/>
-            <circle cx="159" cy="69" r="31" fill="#2e66ff"/><path d="M159 52v34M142 69h34" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
-            <path d="M181 92l20 19" stroke="#74a0ff" stroke-width="8" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3>What you will find</h3>
-        <ul>
-          <li>System design guidance from feedstock to markets</li>
-          <li>Operational best practices for facilities and teams</li>
-          <li>Diagnostics, benchmarks and a risk lens</li>
-          <li>Economics, viability and scale pathways</li>
-          <li>Templates and implementation-ready resource structures</li>
-        </ul>
-      </article>
-      <article class="v3-card v3-reveal">
-        <div class="v3-iconbox">
-          <svg viewBox="0 0 240 130" aria-hidden="true">
-            <rect x="28" y="24" width="184" height="84" rx="22" fill="#fff"/>
-            <circle cx="68" cy="66" r="17" fill="#2e66ff"/><circle cx="120" cy="66" r="17" fill="#75a1ff"/><circle cx="172" cy="66" r="17" fill="#a7c1ff"/>
-            <path d="M85 66h18M137 66h18" stroke="#cbdcff" stroke-width="8" stroke-linecap="round"/>
-            <path d="M63 66l5 5 10-13" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h3>How to use it</h3>
-        <ul>
-          <li><strong>Build</strong> for a new system or facility</li>
-          <li><strong>Improve</strong> for an operating MRF</li>
-          <li><strong>Scale</strong> for a model ready to expand</li>
-          <li>Start with diagnostics if you are unsure where the problem sits</li>
-          <li>Go deep only into the module relevant to your decision</li>
-        </ul>
-      </article>
-    </div>
+  </div>
+</section>
 
-    <div class="v3-system-note v3-reveal">
-      <div class="v3-principle">
-        <span class="kicker" style="color:#b9d2ff">Core principle</span>
-        <h3>Do not start with the facility.</h3>
-        <p>Start with material flows, source behaviour, collection reliability, workforce realities, downstream demand and institutional ownership. Then design infrastructure around the system you can actually operate.</p>
-      </div>
-      <div class="v3-system-list">
-        <div><b>1</b><section><span>Start with the system</span><p>Diagnose the whole value chain before selecting infrastructure.</p></section></div>
-        <div><b>2</b><section><span>Find the binding constraint</span><p>Volume, contamination, people, machinery, buyers or cash flow may be the real issue.</p></section></div>
-        <div><b>3</b><section><span>Scale only what works</span><p>Replication should strengthen operating discipline rather than amplify weak foundations.</p></section></div>
-      </div>
+<section class="v3-section v3-soft" id="who">
+  <div class="container">
+    <div class="v3-head v3-reveal">
+      <span class="kicker">Who this toolkit is for</span>
+      <h2>Built for the people making circularity work on the ground.</h2>
+      <p>Different users need different decisions from the same system. The toolkit is designed to support each of them without assuming everyone starts from the same place.</p>
+    </div>
+    <div class="v3-audience-grid">
+      <article class="v3-audience-card v3-reveal"><span class="v3-audience-icon">01</span><h3>MRF operators & plant managers</h3><p>Improve throughput, recovery, workforce productivity, quality, safety and economics.</p></article>
+      <article class="v3-audience-card v3-reveal"><span class="v3-audience-icon">02</span><h3>Urban Local Bodies & government</h3><p>Design better infrastructure, operating models, contracts, monitoring systems and partnerships.</p></article>
+      <article class="v3-audience-card v3-reveal"><span class="v3-audience-icon">03</span><h3>Waste-management organisations</h3><p>Strengthen collection, processing, workforce systems, markets and pathways to scale.</p></article>
+      <article class="v3-audience-card v3-reveal"><span class="v3-audience-icon">04</span><h3>Corporate, EPR & CSR teams</h3><p>Understand where investment can strengthen collection, recovery, traceability and recycling systems.</p></article>
+      <article class="v3-audience-card v3-reveal"><span class="v3-audience-icon">05</span><h3>Funders & development partners</h3><p>Assess where catalytic capital, technical assistance and ecosystem support can improve performance.</p></article>
+      <article class="v3-audience-card v3-reveal"><span class="v3-audience-icon">06</span><h3>Infrastructure & technical teams</h3><p>Translate feedstock and operating requirements into facility sizing, layout, machinery and manpower decisions.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="v3-section" id="find">
+  <div class="container">
+    <div class="v3-head v3-reveal">
+      <span class="kicker">What you will find</span>
+      <h2>Everything needed to move from diagnosis to implementation.</h2>
+      <p>The toolkit combines system design, operating guidance, diagnostics and reusable resources so teams can move from understanding a problem to acting on it.</p>
+    </div>
+    <div class="v3-find-grid">
+      <article class="v3-find-card v3-reveal"><b>Diagnose</b><h3>Understand the material opportunity</h3><p>Map material flows, feedstock quality, collection performance and current system constraints.</p></article>
+      <article class="v3-find-card v3-reveal"><b>Design</b><h3>Choose the right system architecture</h3><p>Governance, facility configuration, processing technology, workforce and collection model.</p></article>
+      <article class="v3-find-card v3-reveal"><b>Operate</b><h3>Strengthen day-to-day reliability</h3><p>Intake, sorting, quality control, maintenance, safety, traceability and dispatch.</p></article>
+      <article class="v3-find-card v3-reveal"><b>Make it viable</b><h3>Test whether the economics work</h3><p>CAPEX, OPEX, material value, service fees, logistics, working capital and viability gaps.</p></article>
+      <article class="v3-find-card v3-reveal"><b>Measure</b><h3>Track system health</h3><p>Operational, financial, workforce, quality, market and compliance indicators.</p></article>
+      <article class="v3-find-card v3-reveal"><b>Scale</b><h3>Expand without breaking the model</h3><p>Additional feedstock, capacity, materials, services, geographies, partnerships and financing.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="v3-section v3-how-section" id="how">
+  <div class="container">
+    <div class="v3-head v3-reveal">
+      <span class="kicker">How to use it</span>
+      <h2>You do not need to read the toolkit from beginning to end.</h2>
+      <p>Start from your decision point. Use diagnostics when the problem is unclear, then go directly to the module that helps resolve it.</p>
+    </div>
+    <div class="v3-how-flow v3-reveal">
+      <div class="v3-how-step"><span>01</span><div><b>Choose your starting point</b><p>Are you building, improving or scaling?</p></div></div>
+      <div class="v3-how-arrow">→</div>
+      <div class="v3-how-step"><span>02</span><div><b>Run the relevant diagnostic</b><p>Understand the system or facility before prescribing a solution.</p></div></div>
+      <div class="v3-how-arrow">→</div>
+      <div class="v3-how-step"><span>03</span><div><b>Go deep into the weak area</b><p>Use the practitioner modules, benchmarks and risk guidance.</p></div></div>
+      <div class="v3-how-arrow">→</div>
+      <div class="v3-how-step"><span>04</span><div><b>Implement and track</b><p>Use templates, action lists and KPIs to see whether performance improves.</p></div></div>
     </div>
   </div>
 </section>
@@ -201,48 +260,23 @@
   <div class="container">
     <div class="v3-head v3-reveal">
       <span class="kicker">What makes a circular system work</span>
-      <h2>A circular system is more than recovery infrastructure</h2>
-      <p>High-performing models connect participation at source, inclusive livelihoods and integrated collection–processing–market systems.</p>
+      <h2>A circular system is more than an MRF.</h2>
+      <p>High-performing models connect six interdependent layers. A weakness in any one can constrain the entire system.</p>
     </div>
-    <div class="v3-pillars">
-      <article class="v3-pillar v3-reveal">
-        <svg class="v3-float" viewBox="0 0 320 150" aria-hidden="true">
-          <rect width="320" height="150" rx="22" fill="#eef4ff"/>
-          <circle cx="85" cy="61" r="26" fill="#78a3ff"/><circle cx="145" cy="52" r="21" fill="#2e66ff"/><circle cx="205" cy="65" r="25" fill="#a6c0ff"/>
-          <path d="M55 125c0-21 17-38 38-38h111c21 0 38 17 38 38" fill="#dbe7ff"/>
-          <path d="M145 36V18M136 27l9-9 9 9" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <h3>Participation & behaviour</h3>
-        <p>Build consistent segregation habits, feedback loops and service reliability so cleaner material reaches the recovery system.</p>
-      </article>
-      <article class="v3-pillar v3-reveal">
-        <svg class="v3-float" viewBox="0 0 320 150" aria-hidden="true">
-          <rect width="320" height="150" rx="22" fill="#eef4ff"/>
-          <rect x="62" y="30" width="196" height="93" rx="22" fill="#fff"/>
-          <circle cx="124" cy="69" r="20" fill="#78a3ff"/><circle cx="190" cy="69" r="20" fill="#2e66ff"/>
-          <path d="M102 111c0-16 13-29 29-29h53c16 0 29 13 29 29" fill="#dbe7ff"/>
-          <path d="M117 68l7 7 12-16" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <h3>People & inclusion</h3>
-        <p>Strengthen safety, skills, worker dignity, formal participation and career pathways so the system is resilient and inclusive.</p>
-      </article>
-      <article class="v3-pillar v3-reveal">
-        <svg class="v3-float" viewBox="0 0 320 150" aria-hidden="true">
-          <rect width="320" height="150" rx="22" fill="#eef4ff"/>
-          <rect x="44" y="75" width="230" height="46" rx="17" fill="#dbe7ff"/>
-          <rect x="62" y="58" width="86" height="48" rx="12" fill="#78a3ff"/><rect x="159" y="45" width="99" height="61" rx="12" fill="#2e66ff"/>
-          <rect x="80" y="73" width="19" height="17" rx="4" fill="#fff"/><rect x="110" y="73" width="19" height="17" rx="4" fill="#fff"/>
-          <rect x="180" y="61" width="19" height="17" rx="4" fill="#fff"/><rect x="210" y="61" width="19" height="17" rx="4" fill="#fff"/>
-          <path d="M27 129h265" stroke="#8eb2ff" stroke-width="7" stroke-linecap="round"/>
-        </svg>
-        <h3>Infrastructure & markets</h3>
-        <p>Connect collection, processing, quality, logistics and downstream markets so recovered material stays in productive use.</p>
-      </article>
+    <div class="v3-six-grid">
+      <article class="v3-six-card v3-reveal"><span>01</span><h3>Participation</h3><p>Households, institutions and businesses segregate material correctly and consistently.</p></article>
+      <article class="v3-six-card v3-reveal"><span>02</span><h3>Collection</h3><p>Material reaches the system reliably, efficiently and with limited contamination.</p></article>
+      <article class="v3-six-card v3-reveal"><span>03</span><h3>People</h3><p>Waste workers participate through safer, more dignified and economically meaningful livelihoods.</p></article>
+      <article class="v3-six-card v3-reveal"><span>04</span><h3>Infrastructure</h3><p>Facilities, equipment and logistics are designed around actual material flows and operating realities.</p></article>
+      <article class="v3-six-card v3-reveal"><span>05</span><h3>Markets</h3><p>Recovered materials meet buyer requirements and move reliably into downstream value chains.</p></article>
+      <article class="v3-six-card v3-reveal"><span>06</span><h3>Economics & governance</h3><p>Roles, incentives, contracts, revenue streams and accountability make the system sustainable.</p></article>
+    </div>
+    <div class="v3-core-callout v3-reveal">
+      <div><span class="kicker" style="color:#b9d2ff">Core principle</span><h3>Do not start with the facility.</h3></div>
+      <p>Start with the material, catchment, collection behaviour, downstream market and institutional ownership. Then size infrastructure around the system you can actually operate.</p>
     </div>
   </div>
 </section>
-
-
 <section class="v3-section" id="pathway">
   <div class="container">
     <div class="v3-head v3-reveal">
