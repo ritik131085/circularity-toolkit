@@ -105,7 +105,7 @@
 .tickerTrack{width:max-content;display:flex;align-items:center;gap:16px;padding:14px 22px;animation:principleScroll 34s linear infinite;color:var(--muted);font-size:13px;font-weight:650}
 .tickerTrack span,.tickerTrack strong{white-space:nowrap}.tickerTrack strong{color:var(--blue);font-weight:850}.tickerTrack i{font-style:normal;color:#aac1e7;font-size:15px}
 .principleTicker:hover .tickerTrack{animation-play-state:paused}
-@keyframes principleScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes principleScroll{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 
 .toolsIntro{display:grid;grid-template-columns:1fr 370px;gap:26px;align-items:center;margin-bottom:30px}
 .toolsIntro .sectionHead{margin:0;text-align:left;max-width:760px}
