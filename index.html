@@ -3,33 +3,360 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Circularity Toolkit — practical tools to diagnose, design, structure and optimise circular material systems.">
-<title>Circularity Toolkit</title>
+<meta name="description" content="Circularity Toolkit V3 — practical guidance and diagnostics to build, improve and scale circular material systems.">
+<title>Circularity Toolkit — V3</title>
 <style>
 :root{--ink:#0b1f3a;--green:#1f5eff;--mint:#eaf0ff;--cream:#f4f7fb;--paper:#fbfdff;--muted:#66758a;--line:#dbe4f0;--shadow:0 20px 60px rgba(11,31,58,.09)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}a{color:inherit;text-decoration:none}.container{width:min(1160px,calc(100% - 40px));margin:auto}.header{position:sticky;top:0;z-index:20;background:rgba(251,253,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:74px;display:flex;align-items:center;gap:28px}.brand{display:flex;align-items:center;gap:10px;font-weight:850}.mark{width:34px;height:34px;border-radius:50%;background:var(--green);display:grid;place-items:center;color:#fff}.links{margin-left:auto;display:flex;gap:24px;color:#52657d;font-size:14px;font-weight:650}.cta,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:800}.cta{padding:10px 16px;background:var(--ink);color:#fff;font-size:13px}.section{padding:88px 0}.hero{padding:88px 0 96px;background:linear-gradient(120deg,#fbfdff,#f3f6fb 58%,#edf3ff)}.heroGrid{display:grid;grid-template-columns:1.08fr .92fr;gap:68px;align-items:center}.kicker{text-transform:uppercase;letter-spacing:.13em;font-size:11px;font-weight:850;color:var(--green)}.hero h1{font-size:clamp(48px,6.2vw,78px);line-height:.98;letter-spacing:-.055em;margin:14px 0 22px}.hero h1 span{color:var(--green)}.lede{font-size:19px;color:#53657b}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{min-height:48px;padding:0 20px;border:1px solid transparent;cursor:pointer}.primary{background:var(--green);color:#fff}.ghost{background:#fff;border-color:#d3deec}.note{font-size:13px;color:#708096;margin-top:18px}.system{background:var(--ink);color:#fff;border-radius:28px;padding:27px;box-shadow:0 28px 80px rgba(11,31,58,.18)}.systemHead,.econHead{display:flex;justify-content:space-between;align-items:center}.pill{border:1px solid #38598b;border-radius:999px;padding:5px 9px;color:#dbe8ff;font-size:12px}.flow{display:grid;gap:12px;margin:26px 0}.node{display:flex;gap:14px;align-items:center;padding:13px;border:1px solid rgba(255,255,255,.11);border-radius:15px;background:rgba(255,255,255,.035)}.node b{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#183f73;color:#d8e6ff;font-size:12px}.node span{display:grid}.node small{color:#9cb1cf}.systemFooter{padding-top:18px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;color:#bac9df}.dark{background:var(--ink);color:#fff}.principle{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center}.principle h2,.head h2{font-size:clamp(34px,4.5vw,54px);letter-spacing:-.045em;line-height:1.04;margin:0}.principle p{font-size:19px;color:#cad6e7}.head{max-width:820px;margin-bottom:34px}.head p{color:var(--muted);font-size:17px}.steps,.health{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card,.health article{border:1px solid var(--line);background:#fff;border-radius:20px;padding:24px;box-shadow:var(--shadow)}.stepnum{display:inline-grid;place-items:center;width:35px;height:35px;border-radius:50%;background:var(--mint);color:var(--green);font-weight:850;font-size:12px}.card h3{font-size:21px;line-height:1.15;margin:18px 0 9px}.card p,.health p{color:var(--muted);margin:0}.out{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:13px}.out strong{display:block;margin-top:4px}.soft{background:#f0f4fb}.tools{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.tool{display:grid;grid-template-columns:55px 1fr auto;gap:16px;align-items:start;padding:22px;background:#fff;border:1px solid var(--line);border-radius:18px}.code{font-size:12px;font-weight:850;color:var(--green)}.tool h3{margin:0 0 5px}.tool p{margin:0;color:var(--muted);font-size:14px}.state{font-size:12px;border-radius:999px;background:var(--mint);padding:6px 9px;font-weight:750}.planner{background:#0f2a4f;color:#fff}.plannerTop{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:30px}.plannerTop p{color:#bed0ea}.plannerGrid{display:grid;grid-template-columns:.86fr 1.14fr;gap:20px}.form,.result{border-radius:24px;padding:25px}.form{background:#fff;color:var(--ink)}.result{background:#081c34;border:1px solid #244a78}.fields{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:grid;gap:6px}.field label{font-size:12px;font-weight:750;color:#5c6f87}.field input{width:100%;padding:12px;border-radius:11px;border:1px solid #d6e0ec;background:#fbfdff}.status{border-radius:999px;padding:6px 9px;background:#4b355f;color:#eadcff;font-size:12px;font-weight:800}.status.positive{background:#123c70;color:#cfe0ff}.headlineMetric{margin:24px 0;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.12)}.headlineMetric span,.output span,.output small,.econRow span{color:#9cb1cf}.headlineMetric strong{display:block;font-size:56px;line-height:1;margin:6px 0}.outputs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.output{padding:13px;border:1px solid rgba(255,255,255,.1);border-radius:14px}.output strong{display:block;font-size:23px;margin-top:4px}.econ{margin-top:16px;border-top:1px solid rgba(255,255,255,.12);padding-top:16px}.econRow{display:flex;justify-content:space-between;padding:7px 0}.econRow.total{border-top:1px solid rgba(255,255,255,.12);margin-top:6px;padding-top:12px}.insight{margin-top:16px;background:#12335f;border-radius:14px;padding:15px}.insight b{font-size:11px;text-transform:uppercase;letter-spacing:.11em;color:#cfe0ff}.insight p{margin:6px 0 0;color:#d7e2f2}.playbooks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.playbook{border:1px solid var(--line);border-radius:20px;padding:24px;background:#fff}.playbook.darkcard{background:var(--ink);color:#fff}.playbook p{color:var(--muted)}.darkcard p{color:#bdcbe0}.playbook dl div{padding:11px 0;border-top:1px solid var(--line)}.darkcard dl div{border-color:#274b78}.playbook dt{font-size:11px;text-transform:uppercase;color:#8495aa}.playbook dd{margin:3px 0 0;font-weight:750}.health article span{font-size:12px;color:var(--green);font-weight:850}.health h3{margin:9px 0 7px}.resources{display:grid;gap:10px}.resource{display:grid;grid-template-columns:60px 1fr auto;gap:18px;align-items:center;border-bottom:1px solid var(--line);padding:17px 0}.resource h3{margin:0 0 3px}.resource p{margin:0;color:var(--muted);font-size:14px}.closing{background:var(--green);color:#fff}.closingGrid{display:flex;align-items:center;justify-content:space-between;gap:24px}.closing h2{font-size:clamp(34px,4.5vw,54px);line-height:1.02;letter-spacing:-.045em;margin:0}.lightBtn{background:#fff;color:var(--ink)}footer{background:#081c34;color:#d9e4f2;padding:40px 0}.footer{display:flex;justify-content:space-between;gap:30px;align-items:flex-end}.footer p{color:#91a3b8}.footerlinks{display:flex;gap:18px;font-size:13px;color:#a9b9cd}@media(max-width:900px){.links{display:none}.heroGrid,.principle,.plannerTop,.plannerGrid{grid-template-columns:1fr}.steps,.playbooks,.health{grid-template-columns:1fr 1fr}.tools{grid-template-columns:1fr}}@media(max-width:620px){.container{width:min(100% - 26px,1160px)}.section{padding:66px 0}.cta{display:none}.hero h1{font-size:46px}.steps,.playbooks,.health,.fields,.outputs{grid-template-columns:1fr}.tool,.resource{grid-template-columns:1fr}.closingGrid,.footer{align-items:flex-start;flex-direction:column}}
+
+/* ===== V3 additions ===== */
+.v3-section{padding:88px 0}
+.v3-soft{background:linear-gradient(180deg,#eef4ff 0%,#f8fbff 100%)}
+.v3-dark{background:linear-gradient(180deg,#0b1f3a,#102d58);color:#fff}
+.v3-head{max-width:850px;margin:0 auto 34px;text-align:center}
+.v3-head h2{font-size:clamp(34px,4.6vw,54px);letter-spacing:-.045em;line-height:1.04;margin:0 0 12px}
+.v3-head p{font-size:17px;color:var(--muted);margin:0}
+.v3-dark .v3-head p{color:#bfd0ea}
+.v3-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.v3-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow)}
+.v3-card h3{font-size:21px;line-height:1.18;margin:12px 0 8px}
+.v3-card p,.v3-card li{color:var(--muted)}
+.v3-card ul{margin:12px 0 0;padding-left:19px}
+.v3-card li+li{margin-top:8px}
+.v3-iconbox{height:126px;border-radius:18px;background:linear-gradient(145deg,#eef4ff,#dfeaff);display:grid;place-items:center;overflow:hidden}
+.v3-iconbox svg{width:88%;height:88%}
+.v3-system-note{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;margin-top:18px}
+.v3-principle{border-radius:26px;padding:28px;background:linear-gradient(135deg,#0f2a4f,#16417b);color:#fff;box-shadow:0 20px 60px rgba(11,31,58,.16)}
+.v3-principle h3{font-size:30px;letter-spacing:-.035em;line-height:1.08;margin:0 0 10px}
+.v3-principle p{color:#c8d7ec;font-size:17px;margin:0}
+.v3-system-list{display:grid;gap:10px}
+.v3-system-list div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 18px;display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start}
+.v3-system-list b{width:34px;height:34px;border-radius:50%;background:#eaf0ff;color:#1f5eff;display:grid;place-items:center}
+.v3-system-list span{font-weight:750}
+.v3-system-list p{margin:3px 0 0;color:var(--muted);font-size:14px}
+.v3-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.v3-pillar{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;min-height:310px;box-shadow:var(--shadow)}
+.v3-pillar svg{height:132px;width:100%;margin-bottom:10px}
+.v3-pillar h3{margin:6px 0 8px;font-size:21px}
+.v3-pillar p{margin:0;color:var(--muted)}
+.v3-pillar:after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;background:rgba(31,94,255,.07);right:-55px;bottom:-55px}
+.v3-pathways{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.v3-path{border:1px solid var(--line);border-radius:24px;padding:25px;background:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.v3-path:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#1f5eff,#6b9aff)}
+.v3-path .tag{display:inline-flex;padding:6px 10px;border-radius:999px;background:#eaf0ff;color:#1f5eff;font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.12em}
+.v3-path h3{font-size:25px;letter-spacing:-.03em;line-height:1.08;margin:14px 0 9px}
+.v3-path p{color:var(--muted)}
+.v3-flow{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.v3-flow span{background:#f3f6fb;border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:12px;font-weight:700;color:#52657d}
+.module-v3{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.module-v3 details{background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.13);border-radius:20px;overflow:hidden}
+.module-v3 summary{list-style:none;display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;padding:18px;cursor:pointer}
+.module-v3 summary::-webkit-details-marker{display:none}
+.module-v3 details[open]{background:rgba(255,255,255,.105);border-color:rgba(128,170,255,.45)}
+.module-v3 .mnum{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.12);font-size:12px;font-weight:850;color:#dce8ff}
+.module-v3 details[open] .mnum{background:#2e66ff;color:#fff}
+.module-v3 .mtitle{font-weight:800}
+.module-v3 .msub{display:block;color:#9eb4d2;font-size:12px;margin-top:2px}
+.module-v3 .plus{font-size:20px;color:#a8bddd;transition:transform .25s}
+.module-v3 details[open] .plus{transform:rotate(45deg)}
+.module-v3 .mbody{padding:0 18px 20px 74px;color:#c5d4e8}
+.module-v3 .mbody p{margin:0 0 12px}
+.module-v3 .mbody-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.module-v3 .mbox{border:1px solid rgba(255,255,255,.12);border-radius:15px;padding:13px;background:rgba(255,255,255,.045)}
+.module-v3 .mbox b{display:block;color:#fff;margin-bottom:7px;font-size:13px}
+.module-v3 .mbox ul{margin:0;padding-left:17px;font-size:13px}
+.module-v3 .mbox li+li{margin-top:6px}
+.v3-health{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px;align-items:start}
+.v3-health-form,.v3-health-output{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow)}
+.v3-health-form h3,.v3-health-output h3{margin:0 0 7px;font-size:23px}
+.v3-health-form>p,.v3-health-output>p{color:var(--muted);margin-top:0}
+.v3-health-fields{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.v3-health-fields label{display:grid;gap:6px;font-size:12px;font-weight:750;color:#52657d}
+.v3-health-fields input{width:100%;border:1px solid #d6e0ec;border-radius:11px;padding:11px;background:#fbfdff;color:#0b1f3a}
+.v3-health-actions{display:flex;gap:9px;margin-top:16px}
+.hc-results{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hc-card{border:1px solid var(--line);border-radius:15px;padding:13px;background:#fbfdff}
+.hc-card b{display:block}
+.hc-card small{display:block;color:var(--muted);margin:3px 0 8px}
+.hc-zone{display:inline-flex;padding:5px 8px;border-radius:999px;font-size:11px;font-weight:850}
+.hc-zone.good{background:#e7f7f0;color:#17805e}
+.hc-zone.watch{background:#fff4df;color:#ac6e13}
+.hc-zone.risk{background:#ffe9e8;color:#b8413d}
+.hc-summary{margin-top:12px;padding:14px;border-radius:15px;background:#edf3ff;color:#52657d}
+.v3-risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.v3-risk{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
+.v3-risk .rcode{width:42px;height:42px;border-radius:13px;background:#eaf0ff;color:#1f5eff;display:grid;place-items:center;font-size:11px;font-weight:900}
+.v3-risk h3{font-size:19px;margin:13px 0 6px}
+.v3-risk p{font-size:14px;color:var(--muted);margin:0}
+.v3-risk .rmeta{margin-top:13px;border-top:1px solid var(--line);padding-top:12px}
+.v3-risk .rmeta b{font-size:12px}
+.v3-risk .rmeta span{display:block;color:var(--muted);font-size:13px;margin-top:3px}
+.v3-resource-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.v3-resource{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}
+.v3-resource .rnum{font-size:12px;font-weight:900;color:#1f5eff}
+.v3-resource h3{font-size:17px;line-height:1.2;margin:9px 0 6px}
+.v3-resource p{font-size:13px;color:var(--muted);margin:0}
+.v3-reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+.v3-reveal.v3-visible{opacity:1;transform:none}
+.v3-card,.v3-pillar,.v3-path,.v3-risk,.v3-resource{transition:transform .25s ease,box-shadow .25s ease}
+.v3-card:hover,.v3-pillar:hover,.v3-path:hover,.v3-risk:hover,.v3-resource:hover{transform:translateY(-4px);box-shadow:0 24px 65px rgba(11,31,58,.12)}
+.v3-float{animation:v3float 5s ease-in-out infinite}
+@keyframes v3float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(max-width:900px){
+.v3-grid3,.v3-pillars,.v3-pathways,.v3-risk-grid,.v3-resource-grid,.module-v3{grid-template-columns:1fr 1fr}
+.v3-system-note,.v3-health{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+.v3-grid3,.v3-pillars,.v3-pathways,.v3-risk-grid,.v3-resource-grid,.module-v3,.v3-health-fields,.hc-results,.module-v3 .mbody-grid{grid-template-columns:1fr}
+.module-v3 .mbody{padding-left:18px}
+.v3-section{padding:66px 0}
+}
+
 </style>
 </head>
 <body>
-<header class="header"><div class="container nav"><a class="brand" href="#top"><span class="mark">↻</span><span>Circularity Toolkit</span></a><nav class="links"><a href="#pathway">Pathway</a><a href="#tools">Tools</a><a href="#planner">Planner</a><a href="#playbooks">Playbooks</a><a href="#resources">Resources</a></nav><a class="cta" href="#planner">Run a diagnostic</a></div></header>
+<header class="header"><div class="container nav"><a class="brand" href="#top"><span class="mark">↻</span><span>Circularity Toolkit</span></a><nav class="links"><a href="#about">About</a><a href="#pathway">Pathways</a><a href="#tools">Modules</a><a href="#health-check">Diagnostics</a><a href="#risk">Risk</a><a href="#resources">Resources</a></nav><a class="cta" href="#planner">Run a diagnostic</a></div></header>
 <main id="top">
-<section class="hero"><div class="container heroGrid"><div><span class="kicker">A practical toolkit for circular material systems</span><h1>Move from a waste problem to a <span>working circularity system.</span></h1><p class="lede">Diagnose material flows, design the right infrastructure and operating model, test viability, and track whether the system is actually performing.</p><div class="actions"><a class="btn primary" href="#planner">Build a first-cut system</a><a class="btn ghost" href="#tools">Explore the toolkit</a></div><div class="note">For practitioners working across cities, campuses, institutions, operators and recycling value chains.</div></div><aside class="system"><div class="systemHead"><span>System view</span><span class="pill">Start here</span></div><div class="flow"><div class="node"><b>1</b><span><strong>Material</strong><small>What is generated?</small></span></div><div class="node"><b>2</b><span><strong>Collection</strong><small>What reaches the system?</small></span></div><div class="node"><b>3</b><span><strong>Recovery</strong><small>What can be captured?</small></span></div><div class="node"><b>4</b><span><strong>Market</strong><small>Who takes the output?</small></span></div></div><div class="systemFooter"><span>Infrastructure is only one layer.</span><strong>Design the full system.</strong></div></aside></div></section>
-<section class="section dark"><div class="container principle"><div><span class="kicker" style="color:#b9d2ff">Core principle</span><h2>Do not start with the facility.</h2></div><p>Start with the material, catchment, collection behaviour, downstream market and institutional ownership. Then size infrastructure around the system you can actually operate.</p></div></section>
-<section class="section" id="pathway"><div class="container"><div class="head"><span class="kicker">Implementation pathway</span><h2>Six decisions turn intent into an operating system.</h2><p>The sequence is practical: understand the material first, then design infrastructure, economics and operating discipline around it.</p></div><div class="steps">
-<article class="card"><span class="stepnum">01</span><h3>Diagnose the material system</h3><p>Map generation, composition, catchment, current collection, leakage and existing buyers.</p><div class="out">Core output<strong>Material-flow baseline</strong></div></article>
-<article class="card"><span class="stepnum">02</span><h3>Design the recovery architecture</h3><p>Decide what should happen at source, during collection, at aggregation and at the recovery facility.</p><div class="out">Core output<strong>System architecture</strong></div></article>
-<article class="card"><span class="stepnum">03</span><h3>Engineer for real throughput</h3><p>Size land, sorting, storage, machinery, utilities and shifts around secured feedstock—not theoretical capacity.</p><div class="out">Core output<strong>Facility design brief</strong></div></article>
-<article class="card"><span class="stepnum">04</span><h3>Structure the economics</h3><p>Test material value, service fees, operating costs, logistics and viability support under realistic recovery assumptions.</p><div class="out">Core output<strong>Operating model + unit economics</strong></div></article>
-<article class="card"><span class="stepnum">05</span><h3>Operate with discipline</h3><p>Translate the design into SOPs, staffing, safety, quality control, traceability and reliable downstream dispatch.</p><div class="out">Core output<strong>Operating playbook</strong></div></article>
-<article class="card"><span class="stepnum">06</span><h3>Optimise system health</h3><p>Track utilization, recovery, quality, value, reliability and worker outcomes—and fix the binding constraint.</p><div class="out">Core output<strong>System-health dashboard</strong></div></article>
-</div></div></section>
-<section class="section soft" id="tools"><div class="container"><div class="head"><span class="kicker">Practitioner tools</span><h2>Use the toolkit to answer the decisions that usually derail circularity projects.</h2></div><div class="tools">
-<div class="tool"><span class="code">T01</span><div><h3>Material Flow Diagnostic</h3><p>Estimate dry-waste opportunity, leakage, capture and recoverable material by catchment.</p></div><span class="state">Diagnostic</span></div>
-<div class="tool"><span class="code">T02</span><div><h3>Recovery System Planner</h3><p>Translate catchment assumptions into inbound capacity, footprint, staffing and first-cut economics.</p></div><span class="state">Live</span></div>
-<div class="tool"><span class="code">T03</span><div><h3>Facility Design Checklist</h3><p>Validate flow, storage, machinery, utilities, fire safety, worker welfare and dispatch design.</p></div><span class="state">Checklist</span></div>
-<div class="tool"><span class="code">T04</span><div><h3>Operating Viability Model</h3><p>Stress-test recovery, realization, service fees, OPEX and throughput before scaling.</p></div><span class="state">Model</span></div>
-<div class="tool"><span class="code">T05</span><div><h3>Operator Readiness Assessment</h3><p>Check whether people, process, data, maintenance and offtake are ready for commissioning.</p></div><span class="state">Assessment</span></div>
-<div class="tool"><span class="code">T06</span><div><h3>System Health Scorecard</h3><p>Move beyond tonnes processed to the metrics that show whether the system is resilient.</p></div><span class="state">Dashboard</span></div>
-</div></div></section>
+<section class="hero"><div class="container heroGrid"><div><span class="kicker">A practical toolkit for circular material systems</span><h1>Build circular systems that <span>work in practice.</span></h1><p class="lede">A practical toolkit for designing, operating and scaling material recovery systems — connecting behaviour, people, infrastructure, markets and financial viability.</p><div class="actions"><a class="btn primary" href="#planner">Build a first-cut system</a><a class="btn ghost" href="#tools">Explore the toolkit</a></div><div class="note">For operators, cities, waste-management organisations, funders, corporate teams and ecosystem partners.</div></div><aside class="system"><div class="systemHead"><span>System view</span><span class="pill">Start here</span></div><div class="flow"><div class="node"><b>1</b><span><strong>Material</strong><small>What is generated?</small></span></div><div class="node"><b>2</b><span><strong>Collection</strong><small>What reaches the system?</small></span></div><div class="node"><b>3</b><span><strong>Recovery</strong><small>What can be captured?</small></span></div><div class="node"><b>4</b><span><strong>Market</strong><small>Who takes the output?</small></span></div></div><div class="systemFooter"><span>Infrastructure is only one layer.</span><strong>Design the full system.</strong></div></aside></div></section>
+
+<section class="v3-section" id="about">
+  <div class="container">
+    <div class="v3-head v3-reveal">
+      <span class="kicker">About this toolkit</span>
+      <h2>Who it is for, what you will find, and how to use it</h2>
+      <p>A practitioner-first decision resource for teams designing, operating, funding and scaling circular material systems.</p>
+    </div>
+    <div class="v3-grid3">
+      <article class="v3-card v3-reveal">
+        <div class="v3-iconbox">
+          <svg viewBox="0 0 240 130" aria-hidden="true">
+            <rect x="18" y="20" width="204" height="92" rx="24" fill="#fff"/>
+            <circle cx="82" cy="54" r="20" fill="#78a3ff"/><circle cx="126" cy="47" r="17" fill="#2e66ff"/><circle cx="164" cy="57" r="19" fill="#a8c2ff"/>
+            <path d="M54 98c0-18 14-31 32-31h76c18 0 32 13 32 31" fill="#dbe7ff"/>
+            <path d="M104 98c0-15 10-25 24-25s25 10 25 25" fill="#7ea7ff"/>
+          </svg>
+        </div>
+        <h3>Who it is for</h3>
+        <ul>
+          <li>MRF operators and plant managers</li>
+          <li>Urban Local Bodies and government teams</li>
+          <li>Waste-management organisations and social enterprises</li>
+          <li>Corporate sustainability, EPR and CSR teams</li>
+          <li>Funders, philanthropies and implementation partners</li>
+        </ul>
+      </article>
+      <article class="v3-card v3-reveal">
+        <div class="v3-iconbox">
+          <svg viewBox="0 0 240 130" aria-hidden="true">
+            <rect x="50" y="16" width="94" height="100" rx="18" fill="#fff"/>
+            <rect x="68" y="40" width="55" height="8" rx="4" fill="#dbe7ff"/><rect x="68" y="58" width="42" height="8" rx="4" fill="#dbe7ff"/><rect x="68" y="76" width="50" height="8" rx="4" fill="#dbe7ff"/>
+            <circle cx="159" cy="69" r="31" fill="#2e66ff"/><path d="M159 52v34M142 69h34" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+            <path d="M181 92l20 19" stroke="#74a0ff" stroke-width="8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>What you will find</h3>
+        <ul>
+          <li>System design guidance from feedstock to markets</li>
+          <li>Operational best practices for facilities and teams</li>
+          <li>Diagnostics, benchmarks and a risk lens</li>
+          <li>Economics, viability and scale pathways</li>
+          <li>Templates and implementation-ready resource structures</li>
+        </ul>
+      </article>
+      <article class="v3-card v3-reveal">
+        <div class="v3-iconbox">
+          <svg viewBox="0 0 240 130" aria-hidden="true">
+            <rect x="28" y="24" width="184" height="84" rx="22" fill="#fff"/>
+            <circle cx="68" cy="66" r="17" fill="#2e66ff"/><circle cx="120" cy="66" r="17" fill="#75a1ff"/><circle cx="172" cy="66" r="17" fill="#a7c1ff"/>
+            <path d="M85 66h18M137 66h18" stroke="#cbdcff" stroke-width="8" stroke-linecap="round"/>
+            <path d="M63 66l5 5 10-13" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>How to use it</h3>
+        <ul>
+          <li><strong>Build</strong> for a new system or facility</li>
+          <li><strong>Improve</strong> for an operating MRF</li>
+          <li><strong>Scale</strong> for a model ready to expand</li>
+          <li>Start with diagnostics if you are unsure where the problem sits</li>
+          <li>Go deep only into the module relevant to your decision</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="v3-system-note v3-reveal">
+      <div class="v3-principle">
+        <span class="kicker" style="color:#b9d2ff">Core principle</span>
+        <h3>Do not start with the facility.</h3>
+        <p>Start with material flows, source behaviour, collection reliability, workforce realities, downstream demand and institutional ownership. Then design infrastructure around the system you can actually operate.</p>
+      </div>
+      <div class="v3-system-list">
+        <div><b>1</b><section><span>Start with the system</span><p>Diagnose the whole value chain before selecting infrastructure.</p></section></div>
+        <div><b>2</b><section><span>Find the binding constraint</span><p>Volume, contamination, people, machinery, buyers or cash flow may be the real issue.</p></section></div>
+        <div><b>3</b><section><span>Scale only what works</span><p>Replication should strengthen operating discipline rather than amplify weak foundations.</p></section></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="v3-section v3-soft" id="system-pillars">
+  <div class="container">
+    <div class="v3-head v3-reveal">
+      <span class="kicker">What makes a circular system work</span>
+      <h2>A circular system is more than recovery infrastructure</h2>
+      <p>High-performing models connect participation at source, inclusive livelihoods and integrated collection–processing–market systems.</p>
+    </div>
+    <div class="v3-pillars">
+      <article class="v3-pillar v3-reveal">
+        <svg class="v3-float" viewBox="0 0 320 150" aria-hidden="true">
+          <rect width="320" height="150" rx="22" fill="#eef4ff"/>
+          <circle cx="85" cy="61" r="26" fill="#78a3ff"/><circle cx="145" cy="52" r="21" fill="#2e66ff"/><circle cx="205" cy="65" r="25" fill="#a6c0ff"/>
+          <path d="M55 125c0-21 17-38 38-38h111c21 0 38 17 38 38" fill="#dbe7ff"/>
+          <path d="M145 36V18M136 27l9-9 9 9" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Participation & behaviour</h3>
+        <p>Build consistent segregation habits, feedback loops and service reliability so cleaner material reaches the recovery system.</p>
+      </article>
+      <article class="v3-pillar v3-reveal">
+        <svg class="v3-float" viewBox="0 0 320 150" aria-hidden="true">
+          <rect width="320" height="150" rx="22" fill="#eef4ff"/>
+          <rect x="62" y="30" width="196" height="93" rx="22" fill="#fff"/>
+          <circle cx="124" cy="69" r="20" fill="#78a3ff"/><circle cx="190" cy="69" r="20" fill="#2e66ff"/>
+          <path d="M102 111c0-16 13-29 29-29h53c16 0 29 13 29 29" fill="#dbe7ff"/>
+          <path d="M117 68l7 7 12-16" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>People & inclusion</h3>
+        <p>Strengthen safety, skills, worker dignity, formal participation and career pathways so the system is resilient and inclusive.</p>
+      </article>
+      <article class="v3-pillar v3-reveal">
+        <svg class="v3-float" viewBox="0 0 320 150" aria-hidden="true">
+          <rect width="320" height="150" rx="22" fill="#eef4ff"/>
+          <rect x="44" y="75" width="230" height="46" rx="17" fill="#dbe7ff"/>
+          <rect x="62" y="58" width="86" height="48" rx="12" fill="#78a3ff"/><rect x="159" y="45" width="99" height="61" rx="12" fill="#2e66ff"/>
+          <rect x="80" y="73" width="19" height="17" rx="4" fill="#fff"/><rect x="110" y="73" width="19" height="17" rx="4" fill="#fff"/>
+          <rect x="180" y="61" width="19" height="17" rx="4" fill="#fff"/><rect x="210" y="61" width="19" height="17" rx="4" fill="#fff"/>
+          <path d="M27 129h265" stroke="#8eb2ff" stroke-width="7" stroke-linecap="round"/>
+        </svg>
+        <h3>Infrastructure & markets</h3>
+        <p>Connect collection, processing, quality, logistics and downstream markets so recovered material stays in productive use.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="v3-section" id="pathway">
+  <div class="container">
+    <div class="v3-head v3-reveal">
+      <span class="kicker">Choose your pathway</span>
+      <h2>Build, improve or scale</h2>
+      <p>The toolkit starts from the decision you are trying to make—not from a chapter sequence.</p>
+    </div>
+    <div class="v3-pathways">
+      <article class="v3-path v3-reveal">
+        <span class="tag">Build</span>
+        <h3>I am planning a new recovery system</h3>
+        <p>Move from context and feedstock to an implementation-ready operating model.</p>
+        <div class="v3-flow"><span>Context</span><span>Feedstock</span><span>Governance</span><span>Facility</span><span>Workforce</span><span>Markets</span><span>Economics</span></div>
+      </article>
+      <article class="v3-path v3-reveal">
+        <span class="tag">Improve</span>
+        <h3>I operate an existing facility</h3>
+        <p>Diagnose performance, identify weak links and prioritise operational improvements.</p>
+        <div class="v3-flow"><span>Health check</span><span>Constraint</span><span>Best practice</span><span>Risk</span><span>Action plan</span><span>Track</span></div>
+      </article>
+      <article class="v3-path v3-reveal">
+        <span class="tag">Scale</span>
+        <h3>I want to expand a working model</h3>
+        <p>Decide whether growth should come from throughput, materials, markets, services or geography.</p>
+        <div class="v3-flow"><span>Readiness</span><span>Feedstock</span><span>Capacity</span><span>Market</span><span>Finance</span><span>Replication</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="v3-section v3-dark" id="tools">
+  <div class="container">
+    <div class="v3-head v3-reveal">
+      <span class="kicker" style="color:#9fc1ff">Practitioner modules</span>
+      <h2>Ten modules cover the full circularity system</h2>
+      <p>Open the area relevant to your decision. Each module translates the topic into practical questions, operating choices and signs of a healthy system.</p>
+    </div>
+    <div class="module-v3 v3-reveal">
+
+      <details open><summary><span class="mnum">01</span><span><span class="mtitle">Context & governance</span><span class="msub">Ownership · collection responsibility · incentives</span></span><span class="plus">+</span></summary>
+        <div class="mbody"><p>Choose an operating model that matches institutional capacity, feedstock control and revenue logic.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Who owns assets and material value?</li><li>Who controls collection and feedstock?</li><li>Public, private, PPP O&M, concession, hybrid or cooperative?</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>Responsibilities are explicit</li><li>Feedstock commitments are clear</li><li>Revenue and residue risks have owners</li></ul></div></div></div>
+      </details>
+
+      <details><summary><span class="mnum">02</span><span><span class="mtitle">Feedstock & collection</span><span class="msub">Sources · segregation · seasonality · intake</span></span><span class="plus">+</span></summary>
+        <div class="mbody"><p>Understand what material arrives, in what condition and why—before sizing a recovery facility.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Households, BWGs, commercial and feeder routes</li><li>Segregation and community engagement</li><li>Seasonal peaks and variability</li><li>Gate grading, intake records and rejection protocols</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>Source categories are mapped</li><li>Feedstock calendar is maintained</li><li>Loads are graded and routed at intake</li></ul></div></div></div>
+      </details>
+
+      <details><summary><span class="mnum">03</span><span><span class="mtitle">Facility & infrastructure</span><span class="msub">Site · layout · storage · drainage · utilities</span></span><span class="plus">+</span></summary>
+        <div class="mbody"><p>Design the facility around linear movement, storage discipline, vehicle access and real operating conditions.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Covered footprint and storage capacity</li><li>Brownfield versus greenfield constraints</li><li>Vehicle circulation and dispatch access</li><li>Drainage, ventilation and monsoon resilience</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>No backtracking material flow</li><li>Storage stays out of circulation paths</li><li>Site works during peak weather</li></ul></div></div></div>
+      </details>
+
+      <details><summary><span class="mnum">04</span><span><span class="mtitle">Workforce & inclusion</span><span class="msub">Roles · staffing · training · payment · dignity</span></span><span class="plus">+</span></summary>
+        <div class="mbody"><p>Build workforce resilience through role clarity, cross-training, safe work and meaningful inclusion.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Headcount by role and throughput</li><li>Collector, sorter and operator training</li><li>Backup skills for critical roles</li><li>Payment, formalisation and recognition models</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>No single trained-worker dependency</li><li>Safety and welfare basics are visible</li><li>Retention is actively managed</li></ul></div></div></div>
+      </details>
+
+      <details><summary><span class="mnum">05</span><span><span class="mtitle">Processing & technology</span><span class="msub">Workflow · mechanisation · maintenance · uptime</span></span><span class="plus">+</span></summary>
+        <div class="mbody"><p>Choose the simplest processing system that can reliably deliver the required throughput and quality.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Manual, conveyor or advanced sorting</li><li>Wet contamination and bottleneck management</li><li>Preventive maintenance and spare parts</li><li>Machine ownership and uptime tracking</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>Sequential workflow</li><li>Low unplanned downtime</li><li>Technology matches feedstock and skills</li></ul></div></div></div>
+      </details>
+
+      <details><summary><span class="mnum">06</span><span><span class="mtitle">Quality & traceability</span><span class="msub">Sorting standards · storage · bale tags · special materials</span></span><span class="plus">+</span></summary>
+        <div class="mbody"><p>Build quality control into each stage rather than relying on one final inspection.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Material reference standards</li><li>Storage zones and FIFO logic</li><li>Bale and batch traceability</li><li>Sharps, e-waste and hazardous handling</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>Clear accepted/rejected standards</li><li>Traceable dispatch batches</li><li>Buyer complaints trigger retraining</li></ul></div></div></div>
+      </details>
+
+      <details><summary><span class="mnum">07</span><span><span class="mtitle">Markets & offtake</span><span class="msub">Buyers · dispatch · inventory · price discovery</span></span><span class="plus">+</span></summary>
+        <div class="mbody"><p>Treat downstream market management as an operating function, not an occasional sales activity.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Buyer diversity by material</li><li>Full-load and logistics economics</li><li>Payment terms and working capital</li><li>Inventory turnover and price discovery</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>Material does not sit for long</li><li>Priority streams have buyer options</li><li>Price realization is reviewed routinely</li></ul></div></div></div>
+      </details>
+
+      <details><summary><span class="mnum">08</span><span><span class="mtitle">Economics & viability</span><span class="msub">CAPEX · OPEX · material value · service fees</span></span><span class="plus">+</span></summary>
+        <div class="mbody"><p>Make the revenue stack, cost structure and viability gap explicit before scaling.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Material revenue versus service fees</li><li>Cost per inbound and recovered tonne</li><li>Utilisation and recovery sensitivities</li><li>Where catalytic support is justified</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>Hidden subsidies are visible</li><li>Breakeven levers are understood</li><li>Growth is grounded in unit economics</li></ul></div></div></div>
+      </details>
+
+      <details><summary><span class="mnum">09</span><span><span class="mtitle">Health, risk & compliance</span><span class="msub">KPIs · documentation · safety · early warnings</span></span><span class="plus">+</span></summary>
+        <div class="mbody"><p>Track whether the whole system is healthy—not only whether tonnes are being processed.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Operational and recovery indicators</li><li>Workforce and financial health</li><li>Compliance and traceability records</li><li>Risk signals and escalation thresholds</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>KPIs drive action</li><li>Near-misses are recorded</li><li>Documentation is current and retrievable</li></ul></div></div></div>
+      </details>
+
+      <details><summary><span class="mnum">10</span><span><span class="mtitle">Scale & replication</span><span class="msub">Feedstock · materials · services · clusters · financing</span></span><span class="plus">+</span></summary>
+        <div class="mbody"><p>Scale an existing capability rather than scaling ambition alone.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>More feedstock or higher material value?</li><li>New materials, services or geographies?</li><li>Hub-and-spoke or cluster expansion?</li><li>What contracts and financing enable replication?</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>Current operation is demonstrably healthy</li><li>Scale pathway matches core capability</li><li>Replication simplifies rather than complicates</li></ul></div></div></div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="v3-section" id="health-check">
+  <div class="container">
+    <div class="v3-head v3-reveal">
+      <span class="kicker">Facility health diagnostic</span>
+      <h2>Diagnose before you prescribe</h2>
+      <p>Enter any values you already know. The diagnostic will flag where the operating system needs attention first.</p>
+    </div>
+    <div class="v3-health v3-reveal">
+      <div class="v3-health-form">
+        <h3>Quick health check</h3>
+        <p>Partial input is fine. Use the results as a starting point for investigation—not as an audit.</p>
+        <div class="v3-health-fields">
+          <label>Capacity utilisation (%)<input id="v3Util" type="number" placeholder="e.g. 68"></label>
+          <label>Recovery efficiency (%)<input id="v3Recovery" type="number" placeholder="e.g. 56"></label>
+          <label>Active buyers (count)<input id="v3Buyers" type="number" placeholder="e.g. 2"></label>
+          <label>Labour productivity (kg/day)<input id="v3Labour" type="number" placeholder="e.g. 190"></label>
+          <label>Inventory days<input id="v3Inventory" type="number" placeholder="e.g. 18"></label>
+          <label>Cost per kg recovered (₹)<input id="v3Cost" type="number" placeholder="e.g. 6"></label>
+        </div>
+        <div class="v3-health-actions"><button class="btn primary" type="button" id="v3Assess">Assess facility</button><button class="btn ghost" type="button" id="v3Reset">Reset</button></div>
+      </div>
+      <div class="v3-health-output">
+        <h3>Your performance zones</h3>
+        <p>Focus first on red indicators; they are more likely to be binding constraints.</p>
+        <div id="v3HealthResults" class="hc-results"><div class="hc-summary" style="grid-column:1/-1">Enter one or more values to see the diagnostic.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section planner" id="planner"><div class="container"><div class="plannerTop"><div><span class="kicker" style="color:#b9d2ff">Recovery system planner</span><h2 style="font-size:48px;line-height:1.03;margin:10px 0 0">Build a first-cut circularity system.</h2></div><p>Estimate required throughput, recovery, residuals, facility footprint, staffing and operating viability. Outputs are directional—not engineering standards.</p></div><div class="plannerGrid"><form class="form" id="plannerForm"><h3>System assumptions</h3><div class="fields">
 <div class="field"><label>Catchment population</label><input id="population" type="number" value="250000"></div>
 <div class="field"><label>Waste generation (kg/person/day)</label><input id="wastePerCapita" type="number" step="0.01" value="0.55"></div>
@@ -50,11 +377,7 @@
 <div class="output"><span>Sorting lines</span><strong id="sortingLines">—</strong><small>indicative</small></div>
 <div class="output"><span>People / shift</span><strong id="manpower">—</strong><small>indicative</small></div>
 </div><div class="econ"><div class="econHead"><span>Operating economics</span><span id="marginBadge">—</span></div><div class="econRow"><span>Material revenue</span><strong id="materialRevenue">—</strong></div><div class="econRow"><span>Service revenue</span><strong id="serviceRevenue">—</strong></div><div class="econRow"><span>Operating cost</span><strong id="operatingCost">—</strong></div><div class="econRow total"><span>Indicative operating margin</span><strong id="operatingMargin">—</strong></div></div><div class="insight"><b>What this means</b><p id="plannerInsight">—</p></div></section></div></div></section>
-<section class="section" id="playbooks"><div class="container"><div class="head"><span class="kicker">System playbooks</span><h2>Different contexts need different circularity models.</h2><p>Choose the architecture that fits the waste source, collection control and downstream market.</p></div><div class="playbooks">
-<article class="playbook"><small>01 · Urban ward / city</small><h3>Distributed collection + ward recovery</h3><p>Best where dry-waste sorting must integrate tightly with municipal collection.</p><dl><div><dt>Critical success factor</dt><dd>Reliable feeder tonnage</dd></div><div><dt>Primary risk</dt><dd>Facility built before collection stabilises</dd></div><div><dt>Watch metric</dt><dd>Inbound vs design capacity</dd></div></dl></article>
-<article class="playbook darkcard"><small>02 · Institution / campus</small><h3>Controlled-source circularity hub</h3><p>Best where the institution can influence source segregation, contracts and traceability.</p><dl><div><dt>Critical success factor</dt><dd>Source segregation</dd></div><div><dt>Primary risk</dt><dd>Over-sizing and low utilization</dd></div><div><dt>Watch metric</dt><dd>Recovery value / inbound tonne</dd></div></dl></article>
-<article class="playbook"><small>03 · Regional aggregation</small><h3>Hub-and-spoke recovery network</h3><p>Best where feeder systems can aggregate or pre-sort before a larger secondary sorting hub.</p><dl><div><dt>Critical success factor</dt><dd>Feedstock contracts</dd></div><div><dt>Primary risk</dt><dd>Transport cost destroys value</dd></div><div><dt>Watch metric</dt><dd>Net value after logistics</dd></div></dl></article>
-</div></div></section>
+
 <section class="section soft"><div class="container"><div class="head"><span class="kicker">System health</span><h2>Track the health of the system—not just tonnes processed.</h2></div><div class="health">
 <article><span>01</span><h3>Throughput</h3><p>Is enough material reaching the system to use infrastructure productively?</p><strong>Inbound tonnes / design capacity</strong></article>
 <article><span>02</span><h3>Recovery</h3><p>How much inbound material becomes marketable output?</p><strong>Recovered tonnes / inbound tonnes</strong></article>
@@ -63,7 +386,45 @@
 <article><span>05</span><h3>Reliability</h3><p>Are equipment uptime, staffing and offtake stable?</p><strong>Uptime + sale cycle time</strong></article>
 <article><span>06</span><h3>Inclusion</h3><p>Are livelihoods, safety and formal participation improving as the system scales?</p><strong>Worker income + safety indicators</strong></article>
 </div></div></section>
-<section class="section" id="resources"><div class="container"><div class="head"><span class="kicker">Resource library</span><h2>Turn the toolkit into implementation-ready assets.</h2><p>The next build can attach editable templates, calculators and technical guidance to each resource.</p></div><div class="resources">
+
+<section class="v3-section v3-soft" id="risk">
+  <div class="container">
+    <div class="v3-head v3-reveal">
+      <span class="kicker">Risk lens</span>
+      <h2>Do not wait for visible failure</h2>
+      <p>Use these six categories as an early-warning checklist alongside the health indicators.</p>
+    </div>
+    <div class="v3-risk-grid">
+      <article class="v3-risk v3-reveal"><div class="rcode">OP</div><h3>Operational risk</h3><p>Workflow congestion, downtime and intake-output imbalance.</p><div class="rmeta"><b>Watch for</b><span>Backlogs, repeated bottlenecks and one-machine dependency.</span><b>Respond with</b><span>Flow review, maintenance discipline and labour rebalancing.</span></div></article>
+      <article class="v3-risk v3-reveal"><div class="rcode">INT</div><h3>Integrity & data risk</h3><p>Weak records, unverifiable flows and reconciliation gaps.</p><div class="rmeta"><b>Watch for</b><span>Mismatch between weighment, storage and dispatch records.</span><b>Respond with</b><span>Daily reconciliation and simple batch traceability.</span></div></article>
+      <article class="v3-risk v3-reveal"><div class="rcode">SAF</div><h3>Safety risk</h3><p>Fire, injury, unsafe handling and poor housekeeping.</p><div class="rmeta"><b>Watch for</b><span>Blocked exits, hazardous items and unlogged near misses.</span><b>Respond with</b><span>Daily checks, isolation protocols and corrective-action closure.</span></div></article>
+      <article class="v3-risk v3-reveal"><div class="rcode">FIN</div><h3>Financial risk</h3><p>Price volatility, cash-flow pressure and buyer concentration.</p><div class="rmeta"><b>Watch for</b><span>Slow receivables, old inventory and single-buyer dependence.</span><b>Respond with</b><span>Buyer diversification and tighter cash-cycle tracking.</span></div></article>
+      <article class="v3-risk v3-reveal"><div class="rcode">COMP</div><h3>Compliance risk</h3><p>Licensing, labour, documentation and reporting gaps.</p><div class="rmeta"><b>Watch for</b><span>Expired permits or records that cannot be produced quickly.</span><b>Respond with</b><span>A compliance calendar and standard document repository.</span></div></article>
+      <article class="v3-risk v3-reveal"><div class="rcode">SOC</div><h3>Social & labour risk</h3><p>Turnover, exclusion, grievances and workforce instability.</p><div class="rmeta"><b>Watch for</b><span>Absenteeism, wage disputes and parallel informal practices.</span><b>Respond with</b><span>Role clarity, grievance channels, welfare and worker inclusion.</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="v3-section" id="resources">
+  <div class="container">
+    <div class="v3-head v3-reveal">
+      <span class="kicker">Resource library</span>
+      <h2>Turn guidance into implementation-ready assets</h2>
+      <p>The resource layer is designed for teams to adapt and use directly as the toolkit matures.</p>
+    </div>
+    <div class="v3-resource-grid">
+      <article class="v3-resource v3-reveal"><span class="rnum">R01</span><h3>Waste characterisation template</h3><p>Sampling structure, material categories and mass-balance worksheet.</p></article>
+      <article class="v3-resource v3-reveal"><span class="rnum">R02</span><h3>Feedstock & intake checklist</h3><p>Source profile, gate grading, receipt records and rejection logic.</p></article>
+      <article class="v3-resource v3-reveal"><span class="rnum">R03</span><h3>Facility design brief</h3><p>Layout, movement, storage, utilities, drainage and safety inputs.</p></article>
+      <article class="v3-resource v3-reveal"><span class="rnum">R04</span><h3>Asset maintenance checklist</h3><p>Daily, weekly and monthly checks plus critical-spares planning.</p></article>
+      <article class="v3-resource v3-reveal"><span class="rnum">R05</span><h3>Workforce & training matrix</h3><p>Role-wise staffing, onboarding and refresher-training needs.</p></article>
+      <article class="v3-resource v3-reveal"><span class="rnum">R06</span><h3>Quality & special-material protocol</h3><p>Sorting references, hazardous handling, bale tagging and FIFO.</p></article>
+      <article class="v3-resource v3-reveal"><span class="rnum">R07</span><h3>MRF health scorecard</h3><p>Operations, recovery, workforce, finance, compliance and markets.</p></article>
+      <article class="v3-resource v3-reveal"><span class="rnum">R08</span><h3>Scale-readiness checklist</h3><p>Test whether systems, markets, people and economics are ready to expand.</p></article>
+    </div>
+  </div>
+</section>
+<section class="section" id="resources" style="display:none"><div class="container"><div class="head"><span class="kicker">Resource library</span><h2>Turn the toolkit into implementation-ready assets.</h2><p>The next build can attach editable templates, calculators and technical guidance to each resource.</p></div><div class="resources">
 <div class="resource"><span class="code">R01</span><div><h3>Waste characterization template</h3><p>Sampling plan, material categories and mass-balance worksheet.</p></div><span class="state">Template</span></div>
 <div class="resource"><span class="code">R02</span><div><h3>Facility design brief</h3><p>Inputs for layout, machinery, storage, utilities and safety requirements.</p></div><span class="state">Checklist</span></div>
 <div class="resource"><span class="code">R03</span><div><h3>Operator readiness assessment</h3><p>Pre-commissioning check across people, process, equipment, data and offtake.</p></div><span class="state">Assessment</span></div>
@@ -77,4 +438,38 @@ const d={population:250000,wastePerCapita:.55,dryShare:30,collectionEfficiency:8
 function calc(){let tw=v('population')*v('wastePerCapita')/1000,dry=tw*p('dryShare'),inb=dry*p('collectionEfficiency')*p('captureRate'),m=inb*v('daysPerMonth'),rec=m*p('recoveryRate'),res=m-rec,ann=rec*12,c=cfg(inb),foot=Math.max(2500,inb*c[1]),lines=Math.max(1,Math.ceil(inb/c[2])),people=Math.round(c[3]+inb*c[4]),mat=rec*v('realization'),srv=m*v('serviceFee'),cost=m*v('opex'),mar=mat+srv-cost,mpi=m?mar/m:0;$('systemHeadline').textContent='Indicative '+c[0]+' system';$('inboundTpd').textContent=n(inb);$('recoveredMonth').textContent=w(rec);$('residualMonth').textContent=w(res);$('annualDiversion').textContent=w(ann);$('footprint').textContent=w(foot);$('sortingLines').textContent=w(lines);$('manpower').textContent=w(people);$('materialRevenue').textContent=rs(mat);$('serviceRevenue').textContent=rs(srv);$('operatingCost').textContent=rs(cost);$('operatingMargin').textContent=rs(mar);$('marginBadge').textContent=rs(mpi)+' / inbound t';let s=$('viabilityStatus');if(mar>=0){s.textContent='Indicatively viable';s.classList.add('positive')}else{s.textContent='Viability gap';s.classList.remove('positive')}let u=inb<5?'At this scale, avoid over-engineering: a compact, labour-led configuration may be more resilient than a highly mechanised line.':inb<18?'The system is large enough to benefit from defined sorting lines, bale storage and disciplined material-quality management.':'At this scale, feedstock security, equipment uptime, dispatch planning and downstream offtake become as important as sorting productivity.',e=mar>=0?' Under the current assumptions, operating income exceeds OPEX by about '+rs(mar)+' per month.':' Under the current assumptions, the system has an operating gap of about '+rs(Math.abs(mar))+' per month. Improve recovery/value, reduce cost, or structure a higher service fee before scaling.';$('plannerInsight').textContent=u+e}
 $('plannerForm').addEventListener('submit',e=>{e.preventDefault();calc()});$('plannerForm').addEventListener('input',calc);$('resetBtn').addEventListener('click',()=>{Object.entries(d).forEach(([k,x])=>$(k).value=x);calc()});calc();
 </script>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.v3-reveal');
+  if('IntersectionObserver' in window){
+    var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v3-visible');obs.unobserve(e.target);}});},{threshold:.12});
+    els.forEach(function(el){obs.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('v3-visible');});}
+
+  var metrics=[
+    {id:'v3Util',label:'Capacity utilisation',good:function(v){return v>=70&&v<=90},watch:function(v){return v>=50&&v<70},tip:'Review collection coverage, feeder routes and secured tonnage.'},
+    {id:'v3Recovery',label:'Recovery efficiency',good:function(v){return v>=60},watch:function(v){return v>=40&&v<60},tip:'Investigate contamination, sorting standards and line balance.'},
+    {id:'v3Buyers',label:'Buyer diversity',good:function(v){return v>=3},watch:function(v){return v===2},tip:'Reduce dependence on a single downstream buyer.'},
+    {id:'v3Labour',label:'Labour productivity',good:function(v){return v>=250},watch:function(v){return v>=150&&v<250},tip:'Check role clarity, absenteeism, layout and cross-training.'},
+    {id:'v3Inventory',label:'Inventory days',good:function(v){return v<15},watch:function(v){return v>=15&&v<=30},tip:'Review material quality, dispatch frequency and buyer relationships.'},
+    {id:'v3Cost',label:'Cost per kg recovered',good:function(v){return v<=5},watch:function(v){return v>5&&v<=8},tip:'Examine recovery rate, utilisation, labour and logistics costs.'}
+  ];
+  function assess(){
+    var out=[],risks=0,watches=0;
+    metrics.forEach(function(m){
+      var raw=document.getElementById(m.id).value;
+      if(raw==='')return;
+      var v=Number(raw),z=m.good(v)?'good':m.watch(v)?'watch':'risk';
+      if(z==='risk')risks++; if(z==='watch')watches++;
+      out.push('<div class="hc-card"><b>'+m.label+'</b><small>Entered value: '+v+'</small><span class="hc-zone '+z+'">'+(z==='good'?'On track':z==='watch'?'Needs attention':'Act now')+'</span>'+(z!=='good'?'<small style="margin-top:8px">'+m.tip+'</small>':'')+'</div>');
+    });
+    var summary=risks?'Act on the red indicators first. They are most likely to be constraining the facility.':watches?'No immediate red flags from the values entered, but some areas need attention before they weaken the system.':'The values entered are broadly on track. Continue reviewing them together rather than in isolation.';
+    document.getElementById('v3HealthResults').innerHTML=out.length?out.join('')+'<div class="hc-summary" style="grid-column:1/-1">'+summary+'</div>':'<div class="hc-summary" style="grid-column:1/-1">Enter one or more values to see the diagnostic.</div>';
+  }
+  var a=document.getElementById('v3Assess'); if(a)a.addEventListener('click',assess);
+  var r=document.getElementById('v3Reset'); if(r)r.addEventListener('click',function(){metrics.forEach(function(m){document.getElementById(m.id).value='';});assess();});
+})();
+</script>
+
 </body></html>
