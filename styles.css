@@ -41,9 +41,9 @@
 #pathways .pathCard::before{content:'';position:absolute;left:0;right:0;top:0;height:150px;background-size:cover;background-position:center;transition:transform .35s ease;transform:scale(1.01)}
 #pathways .pathCard::after{content:'';position:absolute;left:0;right:0;top:0;height:150px;background:linear-gradient(180deg,rgba(9,31,62,.04),rgba(9,31,62,.36));pointer-events:none}
 #pathways .pathCard:hover::before{transform:scale(1.045)}
-#pathways .pathCard:nth-child(1)::before{background-image:url('https://upload.wikimedia.org/wikipedia/commons/a/ae/Material_recovery_facility_2004-03-24.jpg');background-position:center 48%}
-#pathways .pathCard:nth-child(2)::before{background-image:url('https://upload.wikimedia.org/wikipedia/commons/9/98/Greenville_Public_Works%2C_ECVC_Recycling_Sorting_facility_-_29.jpg');background-position:center 46%}
-#pathways .pathCard:nth-child(3)::before{background-image:url('https://upload.wikimedia.org/wikipedia/commons/f/f6/Waste_sorting_%287742270854%29.jpg');background-position:center 42%}
+#pathways .pathCard:nth-child(1)::before{background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/A%20plastic%20bottle%20collection%20facility%20for%20recycling.jpg?width=1000');background-position:center 52%}
+#pathways .pathCard:nth-child(2)::before{background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Materials%20recovery%20facility%203.jpg?width=1000');background-position:center 46%}
+#pathways .pathCard:nth-child(3)::before{background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/HDPE%20Jerry%20Can%20Bales.jpg?width=1000');background-position:center 52%}
 #pathways .pathTag{position:relative;z-index:2}
 #pathways .pathCard h3,#pathways .pathCard p,#pathways .pathCta{position:relative;z-index:2}
 
@@ -156,3 +156,31 @@
 @media(prefers-reduced-motion:reduce){
   .tickerTrack{animation:none;white-space:normal;flex-wrap:wrap;width:auto}
 }
+
+/* Plastics-specific image language */
+.heroPhoto figcaption{left:18px;right:auto;bottom:16px;display:grid;gap:1px;max-width:280px;text-transform:none;letter-spacing:0;padding:9px 11px;border-radius:12px;background:rgba(6,18,35,.58)}
+.heroPhoto figcaption span{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#bcd2ee;font-weight:850}
+.heroPhoto figcaption strong{font-size:12px;line-height:1.25;color:#fff}
+
+.systemVisualStrip{margin-top:20px}
+.systemVisualStrip figure{height:240px}
+.systemVisualStrip figcaption{left:14px;right:14px;bottom:13px;display:grid;grid-template-columns:auto 1fr;column-gap:9px;row-gap:1px;align-items:end}
+.systemVisualStrip figcaption span{grid-row:1/3;width:28px;height:28px;border-radius:9px;background:rgba(255,255,255,.15);display:grid;place-items:center;font-size:9px;font-weight:900;color:#fff}
+.systemVisualStrip figcaption strong{font-size:13px;line-height:1.2}
+.systemVisualStrip figcaption small{display:block;color:#c4d4e7;font-size:10px;line-height:1.25;font-weight:500}
+
+.photoSourceNote{display:flex;align-items:center;justify-content:flex-end;gap:9px 12px;flex-wrap:wrap;margin-top:8px;color:var(--muted);font-size:9px}
+.photoSourceNote span{font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.photoSourceNote a{text-decoration:underline;text-underline-offset:2px}
+.photoSourceNote a:hover{color:var(--blue)}
+
+.toolsIntroPhoto figcaption{display:grid;gap:2px}
+.toolsIntroPhoto figcaption span{font-size:9px;text-transform:uppercase;letter-spacing:.11em;color:#c4d7ef;font-weight:850}
+.toolsIntroPhoto figcaption strong{font-size:11px;line-height:1.3}
+
+.imageCredits{line-height:1.45}
+.imageCredits span{font-size:9px;text-transform:uppercase;letter-spacing:.1em}
+.imageCredits a{font-size:9px}
+
+/* Remove now-unused editorial gallery spacing */
+.visualStory{display:none!important}
