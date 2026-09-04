@@ -276,10 +276,43 @@ body{background:var(--ct-bg);color:var(--ct-ink)}
 @media(max-width:1000px){.systemMapFlow{grid-template-columns:1fr 1fr}.systemMapArrow{display:none}.systemMapIntro{grid-template-columns:1fr;gap:16px}.heroBanner{min-height:560px}}
 @media(max-width:620px){.heroBannerInner{padding-top:38px;padding-bottom:36px}.heroBannerBrand{font-size:20px}.heroBannerMark{width:42px;height:42px}.heroBannerCopy{margin-top:38px}.heroBanner h1{font-size:49px}.heroBannerCopy p{font-size:16px}.heroBannerLinks{display:grid}.heroBannerLinks a{width:100%;justify-content:flex-start}.heroBannerFooter{font-size:12px}.systemMapFlow{grid-template-columns:1fr}.systemMapStage{min-height:0}.systemMapPrinciple{align-items:flex-start;flex-direction:column;gap:6px}}
 
+
+/* ===== V3.4 evidence + module depth ===== */
+.evidenceBar{display:grid;grid-template-columns:.95fr 1.05fr;gap:26px;align-items:center;margin:26px 0 30px;padding:22px 24px;border:1px solid rgba(255,255,255,.14);border-radius:20px;background:rgba(255,255,255,.06)}
+.evidenceBar h3{margin:0 0 6px;font-size:20px;letter-spacing:-.025em}.evidenceBar p{margin:0;color:#b9cbe2;font-size:14px}
+.evidenceKey{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.evidenceTag{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border-radius:999px;font-size:11px;font-weight:850;letter-spacing:.03em}
+.evidenceTag:before{content:"";width:7px;height:7px;border-radius:50%}
+.evidenceTag.reg{background:#fff;color:#0d2c57}.evidenceTag.reg:before{background:#2e66ff}
+.evidenceTag.practice{background:rgba(132,175,255,.15);color:#d7e6ff;border:1px solid rgba(132,175,255,.28)}.evidenceTag.practice:before{background:#8eb7ff}
+.evidenceTag.working{background:transparent;color:#b9cbe2;border:1px dashed rgba(255,255,255,.28)}.evidenceTag.working:before{background:#b9cbe2}
+.regBaseline{margin:0 0 24px;border:1px solid rgba(143,180,255,.22);border-radius:22px;background:linear-gradient(135deg,rgba(46,102,255,.12),rgba(255,255,255,.04));padding:22px}
+.regBaselineTop{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}.regBaseline h3{margin:5px 0 8px;font-size:24px}.regBaseline p{margin:0;color:#c5d4e8}
+.regGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:16px}.regItem{border:1px solid rgba(255,255,255,.11);border-radius:15px;padding:13px;background:rgba(255,255,255,.045)}.regItem b{display:block;font-size:13px;color:#fff;margin-bottom:5px}.regItem span{display:block;color:#adbed5;font-size:12px;line-height:1.45}
+.sourceLinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.sourceLinks a{font-size:11px;font-weight:800;color:#a9c7ff;border-bottom:1px solid rgba(169,199,255,.35);padding-bottom:2px}.sourceLinks a:hover{color:#fff}
+.module-v3 details{scroll-margin-top:98px}
+.module-v3 .mbody{padding-right:18px}
+.module-v3 .moduleIntro{font-size:15px;color:#d2deee;margin:0 0 15px}
+.module-v3 .mbody-grid.depth3{grid-template-columns:repeat(3,1fr)}
+.module-v3 .mbox.regbox{border-color:rgba(121,165,255,.28);background:rgba(46,102,255,.07)}
+.module-v3 .mbox .microtag{display:inline-flex;margin-bottom:8px;padding:4px 7px;border-radius:999px;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;background:rgba(255,255,255,.10);color:#bed3f2}
+.module-v3 .mbox.regbox .microtag{background:#2e66ff;color:#fff}
+.module-v3 .moduleSource{margin-top:13px;padding-top:12px;border-top:1px solid rgba(255,255,255,.10);font-size:11px;color:#9eb1ca}
+.module-v3 .moduleSource a{color:#9fc1ff;text-decoration:underline;text-underline-offset:2px}
+.module-v3 .miniTable{width:100%;border-collapse:collapse;margin-top:9px;font-size:12px}.module-v3 .miniTable th,.module-v3 .miniTable td{padding:7px 8px;border-bottom:1px solid rgba(255,255,255,.10);text-align:left}.module-v3 .miniTable th{color:#fff}.module-v3 .miniTable td{color:#bfcee2}
+.authoritySection{padding:86px 0;background:var(--ct-surface2)}
+.authorityGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:start}
+.authorityCard{background:var(--ct-surface);border:1px solid var(--ct-line);border-radius:22px;padding:23px;box-shadow:var(--ct-shadow)}
+.authorityCard h3{margin:0 0 8px;font-size:21px}.authorityCard p{color:var(--ct-muted);margin:0 0 12px}
+.authorityList{display:grid;gap:9px}.authorityList a{display:block;border:1px solid var(--ct-line);border-radius:14px;padding:12px 14px;background:var(--ct-bg)}.authorityList a b{display:block;font-size:13px}.authorityList a span{display:block;font-size:11px;color:var(--ct-muted);margin-top:2px}
+.thresholdNote{margin:14px 0 0;padding:12px 14px;border-radius:14px;background:#fff7e8;border:1px solid #f0d9ad;color:#79551d;font-size:12px}
+@media(max-width:1000px){.evidenceBar,.authorityGrid{grid-template-columns:1fr}.evidenceKey{justify-content:flex-start}.regGrid{grid-template-columns:1fr 1fr}.module-v3 .mbody-grid.depth3{grid-template-columns:1fr}}
+@media(max-width:620px){.regGrid{grid-template-columns:1fr}.regBaselineTop{display:block}}
+
 </style>
 </head>
 <body><a class="skip" href="#top">Skip to content</a>
-<header class="header"><div class="container nav"><a class="brand" href="#top"><span class="mark">↻</span><span>Circularity Toolkit</span></a><nav class="links"><a href="#system-map">System map</a><a href="#pathway">Start</a><a href="#tools">Guidance</a><a href="#health-check">Health check</a><a href="#planner">System planner</a><a href="#risk">Risk</a><a href="#resources">Resources</a></nav><div class="navTools">
+<header class="header"><div class="container nav"><a class="brand" href="#top"><span class="mark">↻</span><span>Circularity Toolkit</span></a><nav class="links"><a href="#system-map">System map</a><a href="#pathway">Start</a><a href="#tools">Guidance</a><a href="#health-check">Health check</a><a href="#planner">System planner</a><a href="#risk">Risk</a><a href="#evidence-base">Evidence</a><a href="#resources">Resources</a></nav><div class="navTools">
     <button class="iconBtn themeToggle" id="themeToggle" type="button" aria-label="Switch theme">
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
       <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -290,7 +323,7 @@ body{background:var(--ct-bg);color:var(--ct-ink)}
     <a class="cta" href="#planner">Run a diagnostic</a>
   </div></div>
   <div id="mobileNav"><nav class="mobileNav container" aria-label="Mobile">
-    <ul><li><a href="#system-map">System map</a></li><li><a href="#pathway">Start</a></li><li><a href="#tools">Guidance</a></li><li><a href="#health-check">Health check</a></li><li><a href="#planner">System planner</a></li><li><a href="#risk">Risk</a></li><li><a href="#resources">Resources</a></li></ul>
+    <ul><li><a href="#system-map">System map</a></li><li><a href="#pathway">Start</a></li><li><a href="#tools">Guidance</a></li><li><a href="#health-check">Health check</a></li><li><a href="#planner">System planner</a></li><li><a href="#risk">Risk</a></li><li><a href="#evidence-base">Evidence</a></li><li><a href="#resources">Resources</a></li></ul>
     <a class="btn primary" href="#planner">Run a diagnostic</a>
   </nav></div></header>
 <main id="top">
@@ -508,47 +541,125 @@ body{background:var(--ct-bg);color:var(--ct-ink)}
       <h2>Ten modules across one connected operating system</h2>
       <p>Use the modules as decision guides. Each one explains the critical choices, the operating practices that matter, and the signals that show whether that part of the system is working.</p>
     </div>
-    <div class="module-v3 v3-reveal">
+    <div class="evidenceBar v3-reveal">
+  <div><h3>Know what kind of guidance you are reading</h3><p>The toolkit separates legal requirements from evidence-informed operating practice and working planning thresholds.</p></div>
+  <div class="evidenceKey"><span class="evidenceTag reg">Regulatory requirement</span><span class="evidenceTag practice">Evidence-informed practice</span><span class="evidenceTag working">Working threshold / heuristic</span></div>
+</div>
+<div class="regBaseline v3-reveal">
+  <div class="regBaselineTop"><div><span class="kicker" style="color:#9fc1ff">India regulatory baseline · 2026</span><h3>What an MRF operator should know now</h3><p>The Solid Waste Management Rules, 2026 superseded the 2016 rules and took effect on 1 April 2026.</p></div></div>
+  <div class="regGrid">
+    <div class="regItem"><b>Four-stream segregation</b><span>Wet, dry, sanitary and special-care waste are separated at source.</span></div>
+    <div class="regItem"><b>MRF registration</b><span>Entities sorting recyclable/non-recyclable waste at MRFs must register with the local body.</span></div>
+    <div class="regItem"><b>Trained personnel</b><span>MRFs are required to engage trained personnel for operations.</span></div>
+    <div class="regItem"><b>Registered channels</b><span>Sorted outputs are to move to registered processors/recyclers; required registrations matter.</span></div>
+    <div class="regItem"><b>Quarterly reporting</b><span>Received, sorted and channelised quantities must be reported through the online portal.</span></div>
+  </div>
+  <div class="sourceLinks"><a href="https://moef.gov.in/uploads/pdf-uploads/pdf_69a16e3b04c107.91022257.pdf" target="_blank" rel="noopener">SWM Rules 2026 · MoEFCC</a> <a href="https://www.swm.cpcb.gov.in/" target="_blank" rel="noopener">CPCB SWM Portal</a> <a href="https://mohua.gov.in/upload/uploadfiles/files/Part2.pdf" target="_blank" rel="noopener">MoHUA MSWM Manual · Part II</a> <a href="https://mohua.gov.in/upload/whatsnew/627b833ecac62Circular-Economy-in-waste-management-FINAL.pdf" target="_blank" rel="noopener">MoHUA Circular Economy in Waste Management</a></div>
+</div>
+<div class="module-v3 v3-reveal">
 
       <details open><summary><span class="mnum">01</span><span><span class="mtitle">Context & governance</span><span class="msub">Ownership · collection responsibility · incentives</span></span><span class="plus">+</span></summary>
         <div class="mbody"><p>Choose an operating model that matches institutional capacity, feedstock control and revenue logic.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Who owns assets and material value?</li><li>Who controls collection and feedstock?</li><li>Public, private, PPP O&M, concession, hybrid or cooperative?</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>Responsibilities are explicit</li><li>Feedstock commitments are clear</li><li>Revenue and residue risks have owners</li></ul></div></div></div>
       </details>
 
-      <details><summary><span class="mnum">02</span><span><span class="mtitle">Feedstock & collection</span><span class="msub">Sources · segregation · seasonality · intake</span></span><span class="plus">+</span></summary>
-        <div class="mbody"><p>Understand what material arrives, in what condition and why—before sizing a recovery facility.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Households, BWGs, commercial and feeder routes</li><li>Segregation and community engagement</li><li>Seasonal peaks and variability</li><li>Gate grading, intake records and rejection protocols</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>Source categories are mapped</li><li>Feedstock calendar is maintained</li><li>Loads are graded and routed at intake</li></ul></div></div></div>
-      </details>
+      <details id="feedstock-module"><summary><span class="mnum">02</span><span><span class="mtitle">Feedstock & collection</span><span class="msub">Four-stream segregation · source quality · routing · intake</span></span><span class="plus">+</span></summary>
+  <div class="mbody">
+    <p class="moduleIntro">Feedstock is the first operating variable. Design around what reliably reaches the system — not only what the catchment theoretically generates.</p>
+    <div class="mbody-grid depth3">
+      <div class="mbox"><span class="microtag">Decision guide</span><b>What to decide</b><ul><li>Which sources contribute dry waste: households, bulk generators, commercial establishments or feeder centres?</li><li>What share arrives correctly segregated, wet-contaminated or mixed with special-care waste?</li><li>How variable are volumes by weekday, season and event?</li><li>What load-grading, rejection and feedback rules should apply at intake?</li></ul></div>
+      <div class="mbox"><span class="microtag">Operating practice</span><b>What good looks like</b><ul><li>Maintain source-wise tonnage and quality data</li><li>Use simple A/B/C intake grades linked to operating action</li><li>Separate upstream behaviour problems from collection-service problems</li><li>Protect dry-waste quality during transport; do not mix streams after segregation</li></ul></div>
+      <div class="mbox regbox"><span class="microtag">Regulatory / evidence</span><b>What is grounded</b><ul><li>SWM Rules 2026 mandate four-stream source segregation: wet, dry, sanitary and special-care waste</li><li>Dry waste is to be routed to registered MRFs or processing facilities</li><li>Collection and transport systems must prevent intermixing; workers involved in collection/transport are to receive appropriate PPE and training</li></ul></div>
+    </div>
+    <div class="moduleSource">Evidence base: <a href="https://moef.gov.in/uploads/pdf-uploads/pdf_69a16e3b04c107.91022257.pdf" target="_blank" rel="noopener">SWM Rules 2026 · MoEFCC</a> · <a href="https://www.swm.cpcb.gov.in/" target="_blank" rel="noopener">CPCB SWM Portal</a></div>
+  </div></details>
 
-      <details><summary><span class="mnum">03</span><span><span class="mtitle">Facility & infrastructure</span><span class="msub">Site · layout · storage · drainage · utilities</span></span><span class="plus">+</span></summary>
-        <div class="mbody"><p>Design the facility around linear movement, storage discipline, vehicle access and real operating conditions.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Covered footprint and storage capacity</li><li>Brownfield versus greenfield constraints</li><li>Vehicle circulation and dispatch access</li><li>Drainage, ventilation and monsoon resilience</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>No backtracking material flow</li><li>Storage stays out of circulation paths</li><li>Site works during peak weather</li></ul></div></div></div>
-      </details>
+      <details id="facility-module"><summary><span class="mnum">03</span><span><span class="mtitle">Facility & infrastructure</span><span class="msub">Capacity · layout · circulation · storage · weather resilience</span></span><span class="plus">+</span></summary>
+  <div class="mbody">
+    <p class="moduleIntro">Facility design should protect linear material flow, safe movement, storage discipline and dispatch — while leaving room for realistic peak loads and maintenance.</p>
+    <div class="mbody-grid depth3">
+      <div class="mbox"><span class="microtag">Decision guide</span><b>What to decide</b><ul><li>What is the secured inbound TPD, not just installed capacity?</li><li>How much space is needed for intake, sorting, baling, finished-goods storage, rejects, utilities and circulation?</li><li>Can collection and dispatch vehicles enter, turn and queue without blocking processing?</li><li>How will drainage, rain ingress, ventilation, fire safety and emergency access be handled?</li></ul></div>
+      <div class="mbox"><span class="microtag">Operating practice</span><b>What good looks like</b><ul><li>Design one-way flow from intake to sorted storage to dispatch</li><li>Keep finished-goods storage out of sorting and vehicle circulation zones</li><li>Build enough covered storage to prevent quality loss during delayed dispatch</li><li>Use mechanisation only where feedstock, maintenance capability and throughput justify it</li></ul><table class="miniTable"><thead><tr><th>MoHUA planning band</th><th>Indicative mode</th></tr></thead><tbody><tr><td>5–10 TPD</td><td>Manual</td></tr><tr><td>10–100 TPD</td><td>Semi-automatic</td></tr><tr><td>&gt;100 TPD</td><td>Automatic</td></tr></tbody></table></div>
+      <div class="mbox regbox"><span class="microtag">Regulatory / evidence</span><b>What is grounded</b><ul><li>MoHUA guidance classifies MRFs broadly as manual for about 5–10 TPD, semi-automatic for about 10–100 TPD and automatic above 100 TPD</li><li>These bands are planning guidance, not engineering design standards</li><li>SWM Rules 2026 require local bodies to provide MRF/secondary-storage capacity with sufficient space for recyclables</li></ul></div>
+    </div>
+    <div class="moduleSource">Evidence base: <a href="https://mohua.gov.in/upload/uploadfiles/files/Part2.pdf" target="_blank" rel="noopener">MoHUA MSWM Manual · Part II</a> · <a href="https://mohua.gov.in/upload/whatsnew/627b833ecac62Circular-Economy-in-waste-management-FINAL.pdf" target="_blank" rel="noopener">MoHUA Circular Economy in Waste Management</a> · <a href="https://moef.gov.in/uploads/pdf-uploads/pdf_69a16e3b04c107.91022257.pdf" target="_blank" rel="noopener">SWM Rules 2026 · MoEFCC</a></div>
+  </div></details>
 
-      <details><summary><span class="mnum">04</span><span><span class="mtitle">Workforce & inclusion</span><span class="msub">Roles · staffing · training · payment · dignity</span></span><span class="plus">+</span></summary>
-        <div class="mbody"><p>Build workforce resilience through role clarity, cross-training, safe work and meaningful inclusion.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Headcount by role and throughput</li><li>Collector, sorter and operator training</li><li>Backup skills for critical roles</li><li>Payment, formalisation and recognition models</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>No single trained-worker dependency</li><li>Safety and welfare basics are visible</li><li>Retention is actively managed</li></ul></div></div></div>
-      </details>
+      <details id="workforce-module"><summary><span class="mnum">04</span><span><span class="mtitle">Workforce & inclusion</span><span class="msub">Roles · training · safety · retention · formal participation</span></span><span class="plus">+</span></summary>
+  <div class="mbody">
+    <p class="moduleIntro">MRF performance depends on a stable, skilled and safe workforce. Staffing design must cover both productivity and worker protection.</p>
+    <div class="mbody-grid depth3">
+      <div class="mbox"><span class="microtag">Decision guide</span><b>What to decide</b><ul><li>What roles are required by shift: intake, sorters, baler, loader, supervisor, records and maintenance?</li><li>Which critical tasks currently depend on one trained person?</li><li>What onboarding, refresher and cross-training is required?</li><li>How are worker safety, grievance resolution, welfare and progression handled?</li></ul></div>
+      <div class="mbox"><span class="microtag">Operating practice</span><b>What good looks like</b><ul><li>Cross-train at least one backup for critical equipment and supervisory roles</li><li>Use visual work instructions and daily start-of-shift checks</li><li>Track absenteeism, turnover, near misses and training completion alongside productivity</li><li>Design inclusion of waste pickers as part of the operating model, not as a separate CSR activity</li></ul></div>
+      <div class="mbox regbox"><span class="microtag">Regulatory / evidence</span><b>What is grounded</b><ul><li>SWM Rules 2026 require trained personnel for operation of MRFs</li><li>The Rules also assign skill-development responsibilities for waste-management manpower</li><li>ILO guidance supports practical action checklists covering storage/handling, workstations, machinery/electricity, physical environment, welfare and work organisation</li></ul></div>
+    </div>
+    <div class="moduleSource">Evidence base: <a href="https://moef.gov.in/uploads/pdf-uploads/pdf_69a16e3b04c107.91022257.pdf" target="_blank" rel="noopener">SWM Rules 2026 · MoEFCC</a> · <a href="https://www.ilo.org/publications/work-improvement-safe-home-action-manual-improving-safety-and-health-e" target="_blank" rel="noopener">ILO worker safety action manual</a></div>
+  </div></details>
 
-      <details><summary><span class="mnum">05</span><span><span class="mtitle">Processing & technology</span><span class="msub">Workflow · mechanisation · maintenance · uptime</span></span><span class="plus">+</span></summary>
-        <div class="mbody"><p>Choose the simplest processing system that can reliably deliver the required throughput and quality.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Manual, conveyor or advanced sorting</li><li>Wet contamination and bottleneck management</li><li>Preventive maintenance and spare parts</li><li>Machine ownership and uptime tracking</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>Sequential workflow</li><li>Low unplanned downtime</li><li>Technology matches feedstock and skills</li></ul></div></div></div>
-      </details>
+      <details id="processing-module"><summary><span class="mnum">05</span><span><span class="mtitle">Processing & technology</span><span class="msub">Pre-sort · separation · baling · uptime · maintenance</span></span><span class="plus">+</span></summary>
+  <div class="mbody">
+    <p class="moduleIntro">Technology should solve a defined material-flow problem. The processing line must be understandable, maintainable and balanced at each stage.</p>
+    <div class="mbody-grid depth3">
+      <div class="mbox"><span class="microtag">Decision guide</span><b>What to decide</b><ul><li>Where does the current line choke: intake, pre-sort, conveyor, category sorting, baling or dispatch?</li><li>Which separation steps require manual judgement and which can be mechanised?</li><li>What machine uptime and preventive-maintenance routines are needed?</li><li>What spares or service dependencies could stop the line for days?</li></ul></div>
+      <div class="mbox"><span class="microtag">Operating practice</span><b>What good looks like</b><ul><li>Pre-sort bulky and contaminated material before finer separation</li><li>Balance each sorting station to avoid bottlenecks moving downstream</li><li>Maintain an asset register, preventive-maintenance calendar and critical-spares list</li><li>Track downtime by cause, not only total uptime</li></ul></div>
+      <div class="mbox regbox"><span class="microtag">Regulatory / evidence</span><b>What is grounded</b><ul><li>MoHUA’s municipal solid-waste manual describes MRF unit processes including pre-sorting, screening, ferrous separation, air classification, non-ferrous separation and detect-and-route systems</li><li>The appropriate combination depends on facility complexity, labour, equipment and cost</li><li>Mechanisation is therefore a design choice, not an automatic sign of better performance</li></ul></div>
+    </div>
+    <div class="moduleSource">Evidence base: <a href="https://mohua.gov.in/upload/uploadfiles/files/Part2.pdf" target="_blank" rel="noopener">MoHUA MSWM Manual · Part II</a></div>
+  </div></details>
 
-      <details><summary><span class="mnum">06</span><span><span class="mtitle">Quality & traceability</span><span class="msub">Sorting standards · storage · bale tags · special materials</span></span><span class="plus">+</span></summary>
-        <div class="mbody"><p>Build quality control into each stage rather than relying on one final inspection.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Material reference standards</li><li>Storage zones and FIFO logic</li><li>Bale and batch traceability</li><li>Sharps, e-waste and hazardous handling</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>Clear accepted/rejected standards</li><li>Traceable dispatch batches</li><li>Buyer complaints trigger retraining</li></ul></div></div></div>
-      </details>
+      <details id="quality-module"><summary><span class="mnum">06</span><span><span class="mtitle">Quality & traceability</span><span class="msub">Sorting standard · storage · bale tagging · special-care waste</span></span><span class="plus">+</span></summary>
+  <div class="mbody">
+    <p class="moduleIntro">Quality is created through repeated checkpoints — at intake, sorting, storage, baling and dispatch — not by inspecting finished material once.</p>
+    <div class="mbody-grid depth3">
+      <div class="mbox"><span class="microtag">Decision guide</span><b>What to decide</b><ul><li>What does acceptable contamination look like for each priority material?</li><li>How should grades be labelled and stored so material cannot be mixed later?</li><li>What information must follow a bale or dispatch batch?</li><li>What happens when sanitary, special-care, e-waste or hazardous items appear in the dry stream?</li></ul></div>
+      <div class="mbox"><span class="microtag">Operating practice</span><b>What good looks like</b><ul><li>Use visual category standards at sorting points</li><li>Use marked storage bays, FIFO and batch/bale identifiers</li><li>Quarantine non-conforming or special-care material immediately</li><li>Close the loop from buyer complaints back to sorter training and source feedback</li></ul></div>
+      <div class="mbox regbox"><span class="microtag">Regulatory / evidence</span><b>What is grounded</b><ul><li>SWM Rules 2026 create separate sanitary and special-care waste streams, reducing the case for treating these as ordinary dry waste</li><li>MRFs are required to manage hazardous waste from their activities under applicable hazardous-waste rules</li><li>MRFs may act as deposition centres for certain separately regulated waste streams where permitted</li></ul></div>
+    </div>
+    <div class="moduleSource">Evidence base: <a href="https://moef.gov.in/uploads/pdf-uploads/pdf_69a16e3b04c107.91022257.pdf" target="_blank" rel="noopener">SWM Rules 2026 · MoEFCC</a></div>
+  </div></details>
 
-      <details><summary><span class="mnum">07</span><span><span class="mtitle">Markets & offtake</span><span class="msub">Buyers · dispatch · inventory · price discovery</span></span><span class="plus">+</span></summary>
-        <div class="mbody"><p>Treat downstream market management as an operating function, not an occasional sales activity.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Buyer diversity by material</li><li>Full-load and logistics economics</li><li>Payment terms and working capital</li><li>Inventory turnover and price discovery</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>Material does not sit for long</li><li>Priority streams have buyer options</li><li>Price realization is reviewed routinely</li></ul></div></div></div>
-      </details>
+      <details id="market-module"><summary><span class="mnum">07</span><span><span class="mtitle">Markets & offtake</span><span class="msub">Buyer requirements · inventory · dispatch · price discovery</span></span><span class="plus">+</span></summary>
+  <div class="mbody">
+    <p class="moduleIntro">Material recovery is incomplete until the output can move into a reliable downstream channel at the required specification and payment terms.</p>
+    <div class="mbody-grid depth3">
+      <div class="mbox"><span class="microtag">Decision guide</span><b>What to decide</b><ul><li>Which materials drive most of the value and which create most of the inventory risk?</li><li>How many active buyers exist for each priority stream?</li><li>Who bears freight, quality rejection and payment-delay risk?</li><li>What dispatch frequency is needed to avoid storage congestion and working-capital lock-up?</li></ul></div>
+      <div class="mbox"><span class="microtag">Operating practice</span><b>What good looks like</b><ul><li>Maintain at least an active primary and backup route for material streams where feasible</li><li>Track inventory age, realised price, rejection and payment days by buyer</li><li>Sell to specification rather than only to the highest quoted spot price</li><li>Use buyer feedback as an operating-quality input</li></ul></div>
+      <div class="mbox regbox"><span class="microtag">Regulatory / evidence</span><b>What is grounded</b><ul><li>SWM Rules 2026 require sorted recyclable/non-recyclable waste to be channelised to registered processing or recycling entities</li><li>MRFs must not deal with entities whose required registration is absent</li><li>Registered MRFs may serve as uptake or deposition points for EPR-linked streams where allowed</li></ul></div>
+    </div>
+    <div class="moduleSource">Evidence base: <a href="https://moef.gov.in/uploads/pdf-uploads/pdf_69a16e3b04c107.91022257.pdf" target="_blank" rel="noopener">SWM Rules 2026 · MoEFCC</a> · <a href="https://www.swm.cpcb.gov.in/" target="_blank" rel="noopener">CPCB SWM Portal</a></div>
+  </div></details>
 
-      <details><summary><span class="mnum">08</span><span><span class="mtitle">Economics & viability</span><span class="msub">CAPEX · OPEX · material value · service fees</span></span><span class="plus">+</span></summary>
-        <div class="mbody"><p>Make the revenue stack, cost structure and viability gap explicit before scaling.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Material revenue versus service fees</li><li>Cost per inbound and recovered tonne</li><li>Utilisation and recovery sensitivities</li><li>Where catalytic support is justified</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>Hidden subsidies are visible</li><li>Breakeven levers are understood</li><li>Growth is grounded in unit economics</li></ul></div></div></div>
-      </details>
+      <details id="economics-module"><summary><span class="mnum">08</span><span><span class="mtitle">Economics & viability</span><span class="msub">Revenue stack · unit cost · working capital · service value</span></span><span class="plus">+</span></summary>
+  <div class="mbody">
+    <p class="moduleIntro">A viable MRF is usually a service-and-material business, not simply a scrap-trading business. Make every subsidy, service payment and cross-subsidy visible.</p>
+    <div class="mbody-grid depth3">
+      <div class="mbox"><span class="microtag">Decision guide</span><b>What to decide</b><ul><li>What is earned per inbound tonne from service/gate fees?</li><li>What is earned per recovered tonne from material sales?</li><li>What does it cost to collect, sort, bale, store, transport and dispose of rejects?</li><li>How much working capital is locked in inventory and receivables?</li></ul></div>
+      <div class="mbox"><span class="microtag">Operating practice</span><b>What good looks like</b><ul><li>Compare economics on both inbound tonnes and recovered tonnes</li><li>Separate controllable operating cost from externally imposed logistics or disposal cost</li><li>Stress-test recovery rate, utilisation, price and service-fee assumptions</li><li>Treat grants or catalytic support as buying a defined capability or transition, not hiding a permanent operating gap</li></ul></div>
+      <div class="mbox regbox"><span class="microtag">Regulatory / evidence</span><b>What is grounded</b><ul><li>SWM Rules 2026 explicitly allow local bodies to determine the cost of MRF services and collected waste through due procedure</li><li>This reinforces a service-value model rather than relying only on material sales</li><li>The toolkit’s break-even and margin outputs remain planning heuristics, not statutory benchmarks</li></ul></div>
+    </div>
+    <div class="moduleSource">Evidence base: <a href="https://moef.gov.in/uploads/pdf-uploads/pdf_69a16e3b04c107.91022257.pdf" target="_blank" rel="noopener">SWM Rules 2026 · MoEFCC</a></div>
+  </div></details>
 
-      <details><summary><span class="mnum">09</span><span><span class="mtitle">Health, risk & compliance</span><span class="msub">KPIs · documentation · safety · early warnings</span></span><span class="plus">+</span></summary>
-        <div class="mbody"><p>Track whether the system is healthy, not only whether tonnes are being processed.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>Operational and recovery indicators</li><li>Workforce and financial health</li><li>Compliance and traceability records</li><li>Risk signals and escalation thresholds</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>KPIs drive action</li><li>Near-misses are recorded</li><li>Documentation is current and retrievable</li></ul></div></div></div>
-      </details>
+      <details id="health-module"><summary><span class="mnum">09</span><span><span class="mtitle">Health, risk & compliance</span><span class="msub">KPI discipline · portal reporting · registered channels · early warning</span></span><span class="plus">+</span></summary>
+  <div class="mbody">
+    <p class="moduleIntro">A facility can process tonnes and still be unhealthy. Performance management should reveal whether the real constraint is feedstock, recovery, people, markets, cash flow or compliance.</p>
+    <div class="mbody-grid depth3">
+      <div class="mbox"><span class="microtag">Decision guide</span><b>What to decide</b><ul><li>Which 8–12 KPIs are reviewed every month and who owns action against each?</li><li>Which indicator should trigger immediate escalation?</li><li>Can intake, sorted output, rejects and dispatch be reconciled?</li><li>Are permits, registrations, buyer status and required reports current?</li></ul></div>
+      <div class="mbox"><span class="microtag">Operating practice</span><b>What good looks like</b><ul><li>Review utilisation, recovery, inventory age, buyer diversity, downtime, productivity, safety and unit economics together</li><li>Use red/amber/green thresholds as screening tools, then investigate root cause</li><li>Maintain one compliance calendar and one evidence repository</li><li>Record near misses and data anomalies before they become incidents or audit findings</li></ul></div>
+      <div class="mbox regbox"><span class="microtag">Regulatory / evidence</span><b>What is grounded</b><ul><li>MRFs must report quantities received, sorted and channelised through the online portal on a quarterly basis</li><li>Reporting is due by the 15th of the first month of the next quarter under SWM Rules 2026</li><li>The health-check thresholds used on this website are working screening thresholds, not CPCB statutory performance standards</li></ul></div>
+    </div>
+    <div class="moduleSource">Evidence base: <a href="https://moef.gov.in/uploads/pdf-uploads/pdf_69a16e3b04c107.91022257.pdf" target="_blank" rel="noopener">SWM Rules 2026 · MoEFCC</a> · <a href="https://www.swm.cpcb.gov.in/" target="_blank" rel="noopener">CPCB SWM Portal</a></div>
+  </div></details>
 
-      <details id="scale-module"><summary><span class="mnum">10</span><span><span class="mtitle">Scale & replication</span><span class="msub">Feedstock · materials · services · clusters · financing</span></span><span class="plus">+</span></summary>
-        <div class="mbody"><p>Scale proven capability, not ambition alone.</p><div class="mbody-grid"><div class="mbox"><b>Key decisions</b><ul><li>More feedstock or higher material value?</li><li>New materials, services or geographies?</li><li>Hub-and-spoke or cluster expansion?</li><li>What contracts and financing enable replication?</li></ul></div><div class="mbox"><b>What good looks like</b><ul><li>Current operation is demonstrably healthy</li><li>Scale pathway matches core capability</li><li>Replication simplifies rather than complicates</li></ul></div></div></div>
-      </details>
+      <details id="scale-module"><summary><span class="mnum">10</span><span><span class="mtitle">Scale & replication</span><span class="msub">Readiness · feedstock · value addition · geography · financing</span></span><span class="plus">+</span></summary>
+  <div class="mbody">
+    <p class="moduleIntro">Scale a proven capability, not a weak operating system. Growth should strengthen the model’s economics, market access or service reach.</p>
+    <div class="mbody-grid depth3">
+      <div class="mbox"><span class="microtag">Decision guide</span><b>What to decide</b><ul><li>Is the current operation stable enough to absorb additional complexity?</li><li>Should growth come from more feedstock, better recovery, higher-value processing, new services or new geography?</li><li>Would hub-and-spoke aggregation improve logistics and utilisation?</li><li>What contracts, data and financing evidence will partners need before committing?</li></ul></div>
+      <div class="mbox"><span class="microtag">Operating practice</span><b>What good looks like</b><ul><li>Stabilise baseline KPIs before adding capacity</li><li>Scale one constraint at a time and track whether system economics improve</li><li>Standardise SOPs, data definitions and commercial templates before replication</li><li>Use cluster or hub-and-spoke models only when logistics and feedstock density support them</li></ul></div>
+      <div class="mbox regbox"><span class="microtag">Regulatory / evidence</span><b>What is grounded</b><ul><li>SWM Rules 2026 allow registered MRFs to provide uptake/deposition/drop-off services for specified waste streams and EPR-linked pathways where possible</li><li>Urban and rural local bodies are required to establish MRF capacity based on waste generation and may use third parties/PPP routes</li><li>This creates a stronger regulatory basis for interoperable recovery networks, subject to local approvals and applicable waste-stream rules</li></ul></div>
+    </div>
+    <div class="moduleSource">Evidence base: <a href="https://moef.gov.in/uploads/pdf-uploads/pdf_69a16e3b04c107.91022257.pdf" target="_blank" rel="noopener">SWM Rules 2026 · MoEFCC</a> · <a href="https://www.swm.cpcb.gov.in/" target="_blank" rel="noopener">CPCB SWM Portal</a></div>
+  </div></details>
 
     </div>
   </div>
@@ -560,7 +671,7 @@ body{background:var(--ct-bg);color:var(--ct-ink)}
     <div class="v3-head v3-reveal">
       <span class="kicker">Facility health diagnostic</span>
       <h2>Find the constraint before choosing the fix</h2>
-      <p>Enter the values you know. The health check highlights where performance is off track and what to investigate first.</p>
+      <p>Enter the values you know. The health check highlights where performance is off track and what to investigate first.</p><div class="thresholdNote"><strong>Important:</strong> the target bands below are working screening thresholds for diagnosis. They are not statutory CPCB performance benchmarks and should be calibrated to the facility context and verified baseline.</div>
     </div>
     <div class="v3-health v3-reveal">
       <div class="v3-health-form">
@@ -584,7 +695,7 @@ body{background:var(--ct-bg);color:var(--ct-ink)}
     </div>
   </div>
 </section>
-<section class="section planner" id="planner"><div class="container"><div class="plannerTop"><div><span class="kicker" style="color:#b9d2ff">Recovery system planner</span><h2 style="font-size:48px;line-height:1.03;margin:10px 0 0">Build a first-cut system design</h2></div><p>Estimate required throughput, recovery, residuals, facility footprint, staffing and operating viability. Outputs are directional—not engineering standards.</p></div><div class="plannerGrid"><form class="form" id="plannerForm"><h3>System assumptions</h3><div class="fields">
+<section class="section planner" id="planner"><div class="container"><div class="plannerTop"><div><span class="kicker" style="color:#b9d2ff">Recovery system planner</span><h2 style="font-size:48px;line-height:1.03;margin:10px 0 0">Build a first-cut system design</h2></div><p>Estimate required throughput, recovery, residuals, facility footprint, staffing and operating viability. Outputs are directional—not engineering standards.</p><div class="thresholdNote" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);color:#c7d7ec"><strong>Planning basis:</strong> MRF mode classifications reference MoHUA guidance; footprint, line, staffing and financial outputs remain toolkit heuristics and require local engineering validation.</div></div><div class="plannerGrid"><form class="form" id="plannerForm"><h3>System assumptions</h3><div class="fields">
 <div class="field"><label>Catchment population</label><input id="population" type="number" min="1" max="50000000" step="1" value="250000"></div>
 <div class="field"><label>Waste generation (kg/person/day)</label><input id="wastePerCapita" type="number" min="0.01" max="5" step="0.01" value="0.55"></div>
 <div class="field"><label>Dry waste share (%)</label><input id="dryShare" type="number" min="0" max="100" step="1" value="30"></div>
@@ -635,6 +746,21 @@ body{background:var(--ct-bg);color:var(--ct-ink)}
   </div>
 </section>
 
+<section class="authoritySection" id="evidence-base">
+  <div class="container">
+    <div class="v3-head v3-reveal"><span class="kicker">Evidence base</span><h2>Built on current rules and practitioner guidance</h2><p>Source material is used for regulatory requirements and technical framing. Toolkit thresholds and sizing assumptions are separately identified as working heuristics.</p></div>
+    <div class="authorityGrid">
+      <div class="authorityCard v3-reveal"><h3>How to read the toolkit</h3><p><strong>Regulatory requirements</strong> are drawn from current government rules or official guidance. <strong>Evidence-informed practices</strong> translate official manuals and worker-safety guidance into operating routines. <strong>Working thresholds</strong> are diagnostic or planning aids and must be calibrated before investment or compliance decisions.</p></div>
+      <div class="authorityCard v3-reveal"><h3>Core references</h3><div class="authorityList">
+        <a href="https://moef.gov.in/uploads/pdf-uploads/pdf_69a16e3b04c107.91022257.pdf" target="_blank" rel="noopener"><b>Solid Waste Management Rules, 2026 · MoEFCC</b><span>Current legal framework; effective 1 April 2026</span></a>
+        <a href="https://www.swm.cpcb.gov.in/" target="_blank" rel="noopener"><b>Centralised Solid Waste Management Portal · CPCB</b><span>Registration and reporting framework</span></a>
+        <a href="https://mohua.gov.in/upload/uploadfiles/files/Part2.pdf" target="_blank" rel="noopener"><b>Manual on Municipal Solid Waste Management · MoHUA</b><span>MRF unit processes and technical planning guidance</span></a>
+        <a href="https://mohua.gov.in/upload/whatsnew/627b833ecac62Circular-Economy-in-waste-management-FINAL.pdf" target="_blank" rel="noopener"><b>Circular Economy in Waste Management · MoHUA</b><span>MRF classification and circular-economy pathways</span></a>
+        <a href="https://www.ilo.org/publications/work-improvement-safe-home-action-manual-improving-safety-and-health-e" target="_blank" rel="noopener"><b>Worker safety action guidance · ILO</b><span>Practical workplace safety principles relevant to waste handling</span></a>
+      </div></div>
+    </div>
+  </div>
+</section>
 <section class="v3-section" id="resources">
   <div class="container">
     <div class="v3-head v3-reveal">
