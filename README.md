@@ -13,3 +13,5 @@ A practical, neutral-brand toolkit for diagnosing, designing, structuring and op
 The website is published through GitHub Pages from the `main` branch.
 
 > Planning outputs in the prototype are directional and should not be treated as engineering standards without validated technical inputs.
+
+Live site target: https://ritik131085.github.io/circularity-toolkit/
