@@ -13,7 +13,7 @@
 }
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}a{color:inherit;text-decoration:none}button,input,select{font:inherit}.container{width:min(1180px,calc(100% - 36px));margin:auto}.skip{position:absolute;left:-9999px;top:0;background:var(--blue);color:#fff;padding:10px 14px;z-index:999}.skip:focus{left:0}.header{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:74px;display:flex;align-items:center;gap:22px}.brand{display:flex;align-items:center;gap:10px;font-weight:850;white-space:nowrap}.brandMark{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--blue-2));color:#fff;display:grid;place-items:center;font-size:19px}.topTabs{margin-left:auto;display:flex;gap:5px;padding:5px;border:1px solid var(--line);background:var(--surface);border-radius:999px;box-shadow:0 8px 26px rgba(11,31,58,.05)}.topTabs a{padding:9px 16px;border-radius:999px;color:var(--muted);font-size:13px;font-weight:800}.topTabs a:hover,.topTabs a.active{background:var(--surface-2);color:var(--blue)}.navActions{display:flex;align-items:center;gap:8px}.iconBtn{width:38px;height:38px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer}.mobileToggle{display:none}.mobileNav{display:none;border-top:1px solid var(--line);background:var(--bg);padding:12px 18px 18px}.mobileNav.open{display:grid;gap:6px}.mobileNav a{padding:11px 8px;border-radius:10px;font-weight:750}.mobileNav a:hover{background:var(--surface-2)}
 
-.hero{padding:34px 0 28px}.heroBanner{position:relative;overflow:hidden;border-radius:30px;background:linear-gradient(115deg,#17365f 0%,#1f5eff 54%,#4e86ff 100%);color:#fff;padding:54px 58px 44px;box-shadow:0 28px 80px rgba(31,94,255,.22)}.heroBanner:before,.heroBanner:after{content:'';position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.14)}.heroBanner:before{width:390px;height:390px;right:-120px;top:-170px}.heroBanner:after{width:240px;height:240px;right:40px;bottom:-150px}.heroKicker{font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:900;color:#d6e4ff}.hero h1{font-size:clamp(42px,6vw,70px);letter-spacing:-.055em;line-height:.98;margin:13px 0 18px;max-width:860px}.heroLead{font-size:18px;color:#e3edff;max-width:800px;margin:0}.heroShortcuts{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.heroShortcuts a{display:flex;align-items:center;gap:9px;padding:11px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.1);font-size:13px;font-weight:800;backdrop-filter:blur(10px)}.heroShortcuts a:hover{background:#fff;color:#17365f}.heroMeta{margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);font-size:12px;color:#d9e6ff;letter-spacing:.02em}
+.hero{padding:34px 0 28px}.heroBanner{position:relative;overflow:hidden;border-radius:30px;background:linear-gradient(115deg,#17365f 0%,#1f5eff 62%,#4e86ff 100%);color:#fff;padding:0;box-shadow:0 28px 80px rgba(31,94,255,.22);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(330px,.8fr);min-height:520px}.heroBanner:before,.heroBanner:after{content:'';position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.14)}.heroBanner:before{width:390px;height:390px;right:-120px;top:-170px}.heroBanner:after{width:240px;height:240px;right:40px;bottom:-150px}.heroKicker{font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:900;color:#d6e4ff}.hero h1{font-size:clamp(42px,6vw,70px);letter-spacing:-.055em;line-height:.98;margin:13px 0 18px;max-width:860px}.heroLead{font-size:18px;color:#e3edff;max-width:800px;margin:0}.heroShortcuts{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.heroShortcuts a{display:flex;align-items:center;gap:9px;padding:11px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.1);font-size:13px;font-weight:800;backdrop-filter:blur(10px)}.heroShortcuts a:hover{background:#fff;color:#17365f}.heroMeta{margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);font-size:12px;color:#d9e6ff;letter-spacing:.02em}
 
 .section{padding:82px 0}.sectionSoft{background:var(--surface-2)}.sectionDark{background:linear-gradient(180deg,var(--navy),var(--navy-2));color:#fff}.sectionHead{max-width:850px;margin:0 auto 34px;text-align:center}.eyebrow{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--blue);font-weight:900;margin-bottom:10px}.sectionDark .eyebrow{color:#a8c5ff}.sectionHead h2{font-size:clamp(32px,4.4vw,52px);line-height:1.04;letter-spacing:-.045em;margin:0 0 10px}.sectionHead p{margin:0;color:var(--muted);font-size:16px}.sectionDark .sectionHead p{color:#b8cae3}
 
@@ -46,5 +46,50 @@
 #pathways .pathCard:nth-child(3)::before{background-image:url('https://upload.wikimedia.org/wikipedia/commons/f/f6/Waste_sorting_%287742270854%29.jpg');background-position:center 42%}
 #pathways .pathTag{position:relative;z-index:2}
 #pathways .pathCard h3,#pathways .pathCard p,#pathways .pathCta{position:relative;z-index:2}
-#pathways .container::after{content:'Open-source imagery · Wikimedia Commons · public domain';display:block;text-align:center;margin-top:14px;color:var(--muted);font-size:10px;letter-spacing:.02em}
+
 @media(max-width:640px){#pathways .pathCard{padding-top:176px}#pathways .pathCard::before,#pathways .pathCard::after{height:142px}}
+
+/* Formal editorial design system */
+.heroCopy{position:relative;z-index:2;padding:58px 50px 44px;display:flex;flex-direction:column;justify-content:center}
+.heroPhoto{position:relative;margin:0;min-height:100%;overflow:hidden}
+.heroPhoto:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#1f5eff 0%,rgba(31,94,255,.45) 22%,rgba(8,26,49,.10) 68%,rgba(8,26,49,.22) 100%)}
+.heroPhoto img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.88) contrast(1.02)}
+.heroPhoto figcaption{position:absolute;right:18px;bottom:16px;z-index:2;color:rgba(255,255,255,.86);font-size:10px;text-transform:uppercase;letter-spacing:.11em;font-weight:800;background:rgba(7,19,37,.35);backdrop-filter:blur(8px);padding:6px 9px;border-radius:999px}
+.hero h1{max-width:760px;font-size:clamp(40px,5.2vw,66px)}
+.heroLead{max-width:720px}
+.heroShortcuts a{letter-spacing:.005em}
+
+.systemVisualStrip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.systemVisualStrip figure{position:relative;margin:0;height:220px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow)}
+.systemVisualStrip img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.88);transition:transform .35s ease}
+.systemVisualStrip figure:hover img{transform:scale(1.035)}
+.systemVisualStrip figure:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(7,22,43,.72) 100%)}
+.systemVisualStrip figcaption{position:absolute;left:15px;bottom:12px;z-index:2;color:#fff;font-size:12px;font-weight:800;letter-spacing:.01em}
+
+.infoIcon svg{width:23px;height:23px}
+.infoIcon{font-weight:normal}
+.infoCard h3,.pathCard h3,.riskCard h3,.resourceCard h3,.evidenceCard h3{letter-spacing:-.015em}
+.sectionHead h2{font-weight:800}
+.eyebrow{letter-spacing:.12em}
+
+#pathways .pathCard:nth-child(1)::before{background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Material%20recovery%20facility%202004-03-24.jpg?width=900');background-position:center 48%}
+#pathways .pathCard:nth-child(2)::before{background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Waste%20sorting%20%287742270854%29.jpg?width=900');background-position:center 42%}
+#pathways .pathCard:nth-child(3)::before{background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Downstroke%20Baler%20V-63.jpg?width=900');background-position:center 52%}
+#pathways .container::after{content:none}
+
+.imageCredits{width:min(1180px,calc(100% - 36px));margin:24px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.09);display:flex;gap:10px 14px;flex-wrap:wrap;align-items:center;color:#7f96b2;font-size:10px}
+.imageCredits span{font-weight:700;color:#91a8c4}.imageCredits a{text-decoration:underline;text-underline-offset:2px}.imageCredits a:hover{color:#fff}
+
+@media(max-width:1000px){
+  .heroBanner{grid-template-columns:1fr;min-height:0}
+  .heroCopy{padding:48px 38px 36px}
+  .heroPhoto{height:330px}
+  .heroPhoto:after{background:linear-gradient(180deg,rgba(31,94,255,.28),rgba(8,26,49,.16))}
+}
+@media(max-width:640px){
+  .heroCopy{padding:38px 24px 30px}
+  .heroPhoto{height:260px}
+  .systemVisualStrip{grid-template-columns:1fr}
+  .systemVisualStrip figure{height:210px}
+  .imageCredits{width:min(100% - 24px,1180px)}
+}
