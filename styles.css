@@ -35,3 +35,16 @@
 @media(max-width:640px){.container{width:min(100% - 24px,1180px)}.section{padding:66px 0}.hero{padding-top:20px}.heroBanner{padding:38px 24px 30px;border-radius:24px}.hero h1{font-size:42px}.systemMap,.infoGrid,.pathGrid,.riskGrid,.formGrid,.resultGrid,.healthGrid,.metricGrid,.evidenceGrid{grid-template-columns:1fr}.field.full,.resultBox.full{grid-column:auto}.toolTabs{grid-template-columns:1fr}.resourceCard{grid-template-columns:44px 1fr}.downloadBtn{grid-column:1/-1;width:100%}.footerInner{flex-direction:column;align-items:flex-start}.modules .moduleBody{padding-left:17px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
 @media print{.header,.hero,#system,#resources,.footer,.formActions,.exportRow,.topTabs,.toolTabs{display:none!important}.section{padding:10px 0}.plannerResult,.plannerForm,.diagnosticCard,.toolForm,.toolResult{box-shadow:none!important;border:1px solid #999!important;background:#fff!important;color:#000!important}}
+
+/* Open-source circularity photography — public-domain Wikimedia Commons */
+#pathways .pathCard{position:relative;overflow:hidden;padding-top:184px}
+#pathways .pathCard::before{content:'';position:absolute;left:0;right:0;top:0;height:150px;background-size:cover;background-position:center;transition:transform .35s ease;transform:scale(1.01)}
+#pathways .pathCard::after{content:'';position:absolute;left:0;right:0;top:0;height:150px;background:linear-gradient(180deg,rgba(9,31,62,.04),rgba(9,31,62,.36));pointer-events:none}
+#pathways .pathCard:hover::before{transform:scale(1.045)}
+#pathways .pathCard:nth-child(1)::before{background-image:url('https://upload.wikimedia.org/wikipedia/commons/a/ae/Material_recovery_facility_2004-03-24.jpg');background-position:center 48%}
+#pathways .pathCard:nth-child(2)::before{background-image:url('https://upload.wikimedia.org/wikipedia/commons/9/98/Greenville_Public_Works%2C_ECVC_Recycling_Sorting_facility_-_29.jpg');background-position:center 46%}
+#pathways .pathCard:nth-child(3)::before{background-image:url('https://upload.wikimedia.org/wikipedia/commons/f/f6/Waste_sorting_%287742270854%29.jpg');background-position:center 42%}
+#pathways .pathTag{position:relative;z-index:2}
+#pathways .pathCard h3,#pathways .pathCard p,#pathways .pathCta{position:relative;z-index:2}
+#pathways .container::after{content:'Open-source imagery · Wikimedia Commons · public domain';display:block;text-align:center;margin-top:14px;color:var(--muted);font-size:10px;letter-spacing:.02em}
+@media(max-width:640px){#pathways .pathCard{padding-top:176px}#pathways .pathCard::before,#pathways .pathCard::after{height:142px}}
