@@ -4,7 +4,7 @@ import re
 p = Path('index.html')
 s = p.read_text(encoding='utf-8')
 
-hero_pattern = r'<section class="hero">[\s\S]*?</section>\n\n<section class="v3-section" id="about">'
+hero_pattern = r'<section class="hero">[\s\S]*?</section>\s*<section class="v3-section" id="about">'
 new_hero = '''<section class="hero heroBanner" aria-labelledby="hero-title">
   <div class="container heroBannerInner">
     <div class="heroBannerBrand" aria-label="Circularity Toolkit">
