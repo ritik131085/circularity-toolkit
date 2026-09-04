@@ -555,4 +555,17 @@ $('plannerForm').addEventListener('submit',e=>{e.preventDefault();calc()});$('pl
 })();
 </script>
 
+
+<script>
+(function(){
+  var scaleLink=document.querySelector('a[href="#scale-module"]');
+  var scaleModule=document.getElementById('scale-module');
+  if(scaleLink&&scaleModule){
+    scaleLink.addEventListener('click',function(){
+      scaleModule.open=true;
+    });
+  }
+})();
+</script>
+
 </body></html>
