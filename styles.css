@@ -96,3 +96,63 @@
 
 .riskIcon{width:42px;height:42px;border-radius:13px;background:var(--surface-2);color:var(--blue);display:grid;place-items:center;margin-bottom:10px}
 .riskIcon svg{width:22px;height:22px}
+
+/* V3.9 — editorial motion and visual storytelling */
+.principleTicker{display:grid;grid-template-columns:auto 1fr;align-items:center;margin-top:18px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--surface);box-shadow:0 12px 34px rgba(11,31,58,.06)}
+.tickerLabel{align-self:stretch;display:flex;align-items:center;padding:0 18px;background:var(--navy);color:#fff;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.13em;white-space:nowrap}
+.tickerViewport{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.tickerTrack{width:max-content;display:flex;align-items:center;gap:16px;padding:14px 22px;animation:principleScroll 34s linear infinite;color:var(--muted);font-size:13px;font-weight:650}
+.tickerTrack span,.tickerTrack strong{white-space:nowrap}.tickerTrack strong{color:var(--blue);font-weight:850}.tickerTrack i{font-style:normal;color:#aac1e7;font-size:15px}
+.principleTicker:hover .tickerTrack{animation-play-state:paused}
+@keyframes principleScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.visualStory{padding:24px 0 86px;background:var(--surface-2)}
+.visualStoryGrid{display:grid;grid-template-columns:1.25fr .72fr .78fr;grid-template-rows:230px 230px;gap:12px}
+.visualStory figure{position:relative;margin:0;overflow:hidden;border-radius:22px;background:var(--surface);box-shadow:var(--shadow)}
+.visualStoryLarge{grid-row:1/3}
+.visualStoryStack{display:grid;grid-template-rows:1fr 1fr;gap:12px;grid-row:1/3}
+.visualStoryStack figure{height:100%}
+.visualStory img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.88) contrast(1.02);transition:transform .45s ease}
+.visualStory figure:hover img{transform:scale(1.035)}
+.visualStory figure:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 47%,rgba(5,20,39,.82) 100%)}
+.visualStory figcaption{position:absolute;left:18px;right:18px;bottom:15px;z-index:2;color:#fff}
+.visualStory figcaption span{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:#c9daef;font-weight:850;margin-bottom:3px}
+.visualStory figcaption strong{display:block;font-size:15px;line-height:1.25}
+.visualStoryStatement{grid-row:1/3;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(145deg,#0c2443,#123b6d);color:#fff;border-radius:22px;padding:32px;box-shadow:var(--shadow)}
+.visualStoryStatement .eyebrow{color:#a9c7ff}
+.visualStoryStatement h2{font-size:clamp(27px,3vw,38px);line-height:1.05;letter-spacing:-.04em;margin:5px 0 12px}
+.visualStoryStatement p{color:#bfd0e5;font-size:14px;margin:0}
+.visualStoryStatement a{margin-top:24px;color:#fff;font-size:12px;font-weight:850;padding-top:16px;border-top:1px solid rgba(255,255,255,.14)}
+.visualStoryStatement a b{margin-left:7px}
+
+.toolsIntro{display:grid;grid-template-columns:1fr 370px;gap:26px;align-items:center;margin-bottom:30px}
+.toolsIntro .sectionHead{margin:0;text-align:left;max-width:760px}
+.toolsIntroPhoto{margin:0;position:relative;height:235px;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line)}
+.toolsIntroPhoto img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.84) contrast(1.03)}
+.toolsIntroPhoto:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(5,21,42,.78) 100%)}
+.toolsIntroPhoto figcaption{position:absolute;left:16px;right:16px;bottom:13px;z-index:2;color:#fff;font-size:11px;font-weight:700;line-height:1.35}
+
+@media(max-width:1000px){
+  .visualStoryGrid{grid-template-columns:1.15fr .85fr;grid-template-rows:250px 250px auto}
+  .visualStoryLarge{grid-row:1/3}
+  .visualStoryStack{grid-row:1/3}
+  .visualStoryStatement{grid-column:1/-1;grid-row:3;padding:28px}
+  .toolsIntro{grid-template-columns:1fr}
+  .toolsIntroPhoto{height:300px}
+}
+@media(max-width:640px){
+  .principleTicker{grid-template-columns:1fr}
+  .tickerLabel{padding:10px 14px}
+  .tickerViewport{mask-image:none;-webkit-mask-image:none}
+  .visualStory{padding-bottom:66px}
+  .visualStoryGrid{grid-template-columns:1fr;grid-template-rows:none}
+  .visualStoryLarge,.visualStoryStack,.visualStoryStatement{grid-column:auto;grid-row:auto}
+  .visualStoryLarge{height:330px}
+  .visualStoryStack{grid-template-columns:1fr 1fr;grid-template-rows:190px}
+  .visualStoryStack figure{height:190px}
+  .visualStoryStatement{padding:24px}
+  .toolsIntroPhoto{height:240px}
+}
+@media(prefers-reduced-motion:reduce){
+  .tickerTrack{animation:none;white-space:normal;flex-wrap:wrap;width:auto}
+}
