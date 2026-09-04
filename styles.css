@@ -93,3 +93,6 @@
   .systemVisualStrip figure{height:210px}
   .imageCredits{width:min(100% - 24px,1180px)}
 }
+
+.riskIcon{width:42px;height:42px;border-radius:13px;background:var(--surface-2);color:var(--blue);display:grid;place-items:center;margin-bottom:10px}
+.riskIcon svg{width:22px;height:22px}
